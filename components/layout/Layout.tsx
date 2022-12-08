@@ -33,7 +33,7 @@ export default function Layout({
 }
 
 Layout.defaultProps = {
-  title: 'Website Title | Tagline',
-  description: 'Short description.',
-  keywords: 'Keywords',
+  title: 'Mauricio Lovera | Full Stack Web Developer',
+  description: 'Portfolio website for Mauricio Lovera | Full Stack Web Developer',
+  keywords: 'portfolio, full stack, web developer',
 }
