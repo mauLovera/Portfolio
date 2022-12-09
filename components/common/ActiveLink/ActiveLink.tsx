@@ -2,13 +2,13 @@ import Link from 'next/link'
 import { NextRouter, useRouter } from 'next/router'
 import styles from './ActiveLink.module.scss'
 
-
 interface Props {
   text: string
   url: string
+  ammount?: string
 }
 
-export default function ActiveLink({ text, url }: Props) {
+export default function ActiveLink({ text, url, ammount }: Props) {
   const router: NextRouter = useRouter()
   return (
     <Link
@@ -16,6 +16,7 @@ export default function ActiveLink({ text, url }: Props) {
       className={router.pathname === `/${url}` ? styles.active : ''}
     >
       {text}
+      {ammount ? <small className={styles.ammount}>{ammount}</small> : ''}
     </Link>
   )
 }

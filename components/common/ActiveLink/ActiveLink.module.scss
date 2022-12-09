@@ -1,3 +1,12 @@
+@import '~styles/utilities/palette.scss';
+
 .active {
   color: cornflowerblue;
+}
+
+.ammount {
+  position: relative;
+  opacity: .5;
+  left: $size_4px;
+  bottom: $size_4px;
 }
