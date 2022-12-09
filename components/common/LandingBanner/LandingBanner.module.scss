@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   max-width: $max-width;
+  padding-bottom: $size_128px;
 
   h1 {
     position: relative;
@@ -42,7 +43,7 @@
         //! Temporary Fix
         left: 3vmin;
 
-        color: red;
+        color: $accent-clr;
       }
     }
 

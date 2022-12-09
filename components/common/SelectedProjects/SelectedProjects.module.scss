@@ -1,0 +1,52 @@
+@import '~styles/utilities/_palette.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  max-width: $max-width;
+  width: 100%;
+
+  padding-block: $size_128px;
+  border-block: $divider-border;
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: $size_8px;
+    width: fit-content;
+
+    h2 {
+      display: flex;
+      height: fit-content;
+      overflow: hidden;
+      font-size: $size_64px;
+
+      .spaced {
+        position: relative;
+        left: 2vmin;
+      }
+    }
+
+    p {
+      display: flex;
+      height: fit-content;
+      overflow: hidden;
+      max-width: 35rem;
+    }
+  }
+}
+
+.accent {
+  position: relative;
+  color: $accent-clr;
+}
+
+.arrow {
+  position: absolute;
+  right: -25%;
+  top: -40%;
+  font-size: $size_24px;
+  color: black;
+  scale: 1;
+}
