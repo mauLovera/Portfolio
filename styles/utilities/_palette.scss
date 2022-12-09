@@ -31,10 +31,12 @@ $size_960px: toRem(960);
 $padding-desktop: $size_32px;
 $max-width: 1400px;
 $divider-border: 1px solid rgba(0, 0, 0, 0.2);
+$transition-speed: 0.5s;
 
 //* === Color === //
 
 $accent-clr: red;
+$inactive-clr: rgba(128, 128, 128, 0.75);
 
 //* === Fonts === //
 

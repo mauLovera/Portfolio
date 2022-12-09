@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import styles from './SelectedProjects.module.scss'
+import Row from './Row/Row'
 
 import { motion } from 'framer-motion'
 import { RiArrowRightCircleFill } from 'react-icons/ri'
+import SectionHeader from './SectionHeader/SectionHeader'
+import SectionSubHeader from './SectionSubHeader/SectionSubHeader'
 
 //* === Variants === //
 
@@ -42,41 +45,41 @@ export default function SelectedProjects() {
   return (
     <section className={styles.container}>
       <div className={styles.heading}>
-        <SectionHeader />
-        <SectionSubHeader />
+        <SectionHeader timeline={timeline} animation={lineAnimation} />
+        <SectionSubHeader
+          timeline={timeline}
+          animation={{ lineAnimation, buttonAnimation }}
+        />
+      </div>
+      <div className={styles.content}>
+        <div className={styles.images}></div>
+        <div className={styles.list}>
+          <Row
+            title="Grimore"
+            animation={{ lineAnimation, buttonAnimation }}
+            path="/projects/grimoire"
+            timeline={timeline}
+          />
+          <Row
+            title="Swirl"
+            animation={{ lineAnimation, buttonAnimation }}
+            path="/projects/swirl"
+            timeline={timeline}
+          />
+          <Row
+            title="Orbit"
+            animation={{ lineAnimation, buttonAnimation }}
+            path="/projects/orbit"
+            timeline={timeline}
+          />
+          <Row
+            title="Tic-Tac-Toe"
+            animation={{ lineAnimation, buttonAnimation }}
+            path="/projects/tic-tac-toe"
+            timeline={timeline}
+          />
+        </div>
       </div>
     </section>
-  )
-}
-
-function SectionHeader() {
-  const text: string[] = ['Selected Projects']
-  return (
-    <motion.h2 variants={timeline} initial="initial" whileInView={'animate'}>
-      <motion.span variants={lineAnimation}>{text[0]}</motion.span>
-    </motion.h2>
-  )
-}
-
-function SectionSubHeader() {
-  const text: string[] = [
-    'Below is a few of my most recent projects. To view all of my work, head over to the',
-    ' projects page.',
-  ]
-  return (
-    <motion.p variants={timeline} initial="initial" whileInView={'animate'}>
-      <motion.span variants={lineAnimation}>
-        {text[0]}
-        <Link href={'/projects'} className={styles.accent}>
-          {text[1]}
-          <motion.span
-            className={styles.arrow}
-            variants={buttonAnimation}
-          >
-            <RiArrowRightCircleFill />
-          </motion.span>
-        </Link>
-      </motion.span>
-    </motion.p>
   )
 }

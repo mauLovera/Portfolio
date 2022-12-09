@@ -1,0 +1,32 @@
+@import '~styles/utilities/_palette.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  height: $size_128px;
+  border-bottom: $divider-border;
+  padding-left: $size_32px;
+
+  .title {
+    display: flex;
+    height: fit-content;
+    overflow: hidden;
+  }
+}
+
+.arrow {
+  position: absolute;
+  right: -25%;
+  top: -40%;
+  font-size: $size_24px;
+  color: black;
+  scale: 1;
+
+  svg {
+    transition: $transition-speed;
+    &:hover {
+      scale: 1.1;
+      color: $accent-clr;
+    }
+  }
+}

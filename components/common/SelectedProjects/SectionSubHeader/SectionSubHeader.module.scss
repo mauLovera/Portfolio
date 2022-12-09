@@ -1,0 +1,30 @@
+@import '~styles/utilities/_palette.scss';
+
+.accent {
+  position: relative;
+  color: $accent-clr;
+  &:hover {
+    svg {
+      transition: $transition-speed;
+      color: $accent-clr;
+      scale: 1.1;
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  right: -25%;
+  top: -40%;
+  font-size: $size_24px;
+  color: black;
+  scale: 1;
+
+  svg {
+    transition: $transition-speed;
+    &:hover {
+      scale: 1.1;
+      color: $accent-clr;
+    }
+  }
+}

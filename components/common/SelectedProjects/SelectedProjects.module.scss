@@ -21,11 +21,6 @@
       height: fit-content;
       overflow: hidden;
       font-size: $size_64px;
-
-      .spaced {
-        position: relative;
-        left: 2vmin;
-      }
     }
 
     p {
@@ -35,11 +30,33 @@
       max-width: 35rem;
     }
   }
+
+  .content {
+    padding-top: $size_24px;
+    display: flex;
+    .images {
+      width: 50%;
+    }
+
+    .list {
+      width: 50%;
+      counter-reset: number;
+    }
+  }
 }
+
+//* === Utility === *//
 
 .accent {
   position: relative;
   color: $accent-clr;
+  &:hover {
+    svg {
+      transition: $transition-speed;
+      color: $accent-clr;
+      scale: 1.1;
+    }
+  }
 }
 
 .arrow {
@@ -49,4 +66,12 @@
   font-size: $size_24px;
   color: black;
   scale: 1;
+
+  svg {
+    transition: $transition-speed;
+    &:hover {
+      scale: 1.1;
+      color: $accent-clr;
+    }
+  }
 }
