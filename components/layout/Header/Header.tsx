@@ -7,9 +7,9 @@ export default function Header() {
   return (
     <header className={styles.container}>
       <nav>
-        <Link href={'/'} className={styles.name}>
-          Mauricio Lovera
-        </Link>
+        <div className={styles.name}>
+          <Link href={'/'}>Mauricio Lovera</Link>
+        </div>
         <div className={styles.title}>
           <span>Full Stack Web Developer</span>
           <FaGithub />

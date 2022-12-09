@@ -28,8 +28,13 @@ $size_640px: toRem(640);
 $size_768px: toRem(768);
 $size_960px: toRem(960);
 
+$padding-desktop: $size_256px;
+
 //* === Color === //
 
 //* === Fonts === //
 
+@mixin ff-primary {
+  font-family: 'Poppins';
+}
 
