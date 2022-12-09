@@ -10,7 +10,7 @@ export default function Header() {
     <motion.header
       initial={{ opacity: 0, y: -120 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ ease: 'easeInOut', duration: 0.7, delay: 0.6 }}
+      transition={{ ease: 'easeInOut', duration: 0.7, delay: 2 }}
       className={styles.container}
     >
       <nav>

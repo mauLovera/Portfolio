@@ -1,11 +1,6 @@
 import styles from './LandingBanner.module.scss'
 import { motion } from 'framer-motion'
 
-interface Props {
-  topText: string[]
-  bottomText: string
-}
-
 //* === Variants === //
 
 const banner = {
@@ -28,22 +23,32 @@ const letterAnimation = {
   },
 }
 
-export default function LandingBanner({ topText, bottomText }: Props) {
+const lineAnimation = {
+  initial: { y: 600 },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 2,
+      delay: 2,
+    },
+  },
+}
+
+export default function LandingBanner() {
   return (
     <section className={styles.container}>
       <motion.h1 variants={banner}>
-        <TopRow text={topText} />
-        <BottomRow text={bottomText} />
+        <TopRow />
+        <BottomRows />
       </motion.h1>
     </section>
   )
 }
 
-interface Text {
-  text: string[] | string
-}
+function TopRow() {
+  const text: string[] = ["I'm", 'Mauricio.']
 
-function TopRow({ text }: Text) {
   return (
     <motion.span
       className={styles.top}
@@ -53,10 +58,10 @@ function TopRow({ text }: Text) {
     >
       {[...text[0]].map((letter, idx) => (
         <motion.span key={idx} variants={letterAnimation}>
-          {letter}
+          {letter} 
         </motion.span>
       ))}
-
+      <div className={styles.space} />
       {[...text[1]].map((letter, idx) => (
         <motion.span
           key={idx}
@@ -70,7 +75,9 @@ function TopRow({ text }: Text) {
   )
 }
 
-function BottomRow({ text }: Text) {
+function BottomRows() {
+  const text: string[] = ['A Full Stack Web', 'Developer based', 'in Miami.']
+
   return (
     <motion.span
       className={styles.bottom}
@@ -79,7 +86,7 @@ function BottomRow({ text }: Text) {
       animate="animate"
     >
       {[...text].map((letter, idx) => (
-        <motion.span key={idx} variants={letterAnimation}>
+        <motion.span key={idx} variants={lineAnimation}>
           {letter}
         </motion.span>
       ))}

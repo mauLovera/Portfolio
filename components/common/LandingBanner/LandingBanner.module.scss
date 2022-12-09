@@ -22,8 +22,13 @@
       }
     }
 
+    .space {
+      margin-right: $size_32px;
+    }
+
     .bottom {
-      display: inline-block;
+      display: flex;
+      flex-wrap: wrap;
       height: fit-content;
       overflow: hidden;
     }
