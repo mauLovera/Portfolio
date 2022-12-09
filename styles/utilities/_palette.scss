@@ -28,7 +28,8 @@ $size_640px: toRem(640);
 $size_768px: toRem(768);
 $size_960px: toRem(960);
 
-$padding-desktop: $size_256px;
+$padding-desktop: $size_32px;
+$max-width: 1400px;
 
 //* === Color === //
 

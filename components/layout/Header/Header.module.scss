@@ -4,8 +4,9 @@
   display: flex;
   align-items: center;
   height: $size_96px;
+  max-width: $max-width;
+
   margin: auto;
-  max-width: 1400px;
 
   nav {
     display: flex;
@@ -14,7 +15,7 @@
 
     .name {
       display: flex;
-      width: 30%;
+      width: 20%;
     }
 
     .title {

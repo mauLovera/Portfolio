@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { NextRouter, useRouter } from 'next/router'
 import styles from './ActiveLink.module.scss'
+import { NextRouter, useRouter } from 'next/router'
 
 interface Props {
   text: string
