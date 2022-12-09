@@ -12,8 +12,12 @@ export default function Header() {
         </div>
         <div className={styles.title}>
           <span>Full Stack Web Developer</span>
-          <FaGithub />
-          <FaLinkedin />
+          <Link href={'https://github.com/mauLovera'}>
+            <FaGithub />
+          </Link>
+          <Link href={'https://www.linkedin.com/in/mauriciolovera001/'}>
+            <FaLinkedin />
+          </Link>
         </div>
         <div className={styles.links}>
           <ActiveLink text="Projects" url="projects" />

@@ -22,6 +22,11 @@
       align-items: center;
       gap: $size_8px;
       width: 40%;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
     }
 
     .links {
