@@ -24,6 +24,7 @@
   max-width: $max-width;
 
   h1 {
+    position: relative;
     display: flex;
     flex-direction: column;
     font-size: $size_128px;
@@ -37,7 +38,7 @@
 
       .accent {
         position: relative;
-        
+
         //! Temporary Fix
         left: 3vmin;
 
@@ -52,6 +53,24 @@
       overflow: hidden;
     }
   }
+
+  //! SCROLL CIRCLE
+  // .scroll {
+  //   position: absolute;
+  //   margin: auto;
+  //   bottom: 5%;
+
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
+  //   border-radius: 50%;
+  //   background-color: black;
+  //   color: whitesmoke;
+  //   font-size: $size_12px;
+  //   font-weight: 600;
+
+  //   height: $size_64px;
+  //   width: $size_64px;
+  // }
 }
-
-

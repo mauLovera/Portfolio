@@ -36,6 +36,18 @@ const lineAnimation = {
   },
 }
 
+// const scrollCircleAnimation = {
+//   initial: { scale: 0 },
+//   animate: {
+//     scale: 1,
+//     transition: {
+//       ease: [0.6, 0.01, -0.05, 0.95],
+//       duration: 2,
+//       delay: 4,
+//     },
+//   },
+// }
+
 export default function LandingBanner() {
   return (
     <section className={styles.container}>
@@ -43,6 +55,7 @@ export default function LandingBanner() {
         <TopRow />
         <BottomRows />
       </motion.h1>
+      {/* <ScrollDown /> */}
     </section>
   )
 }
@@ -77,7 +90,7 @@ function TopRow() {
 }
 
 function BottomRows() {
-  const text: string[] = ['A Full Stack Web', 'Developer based', 'in Miami.']
+  const text: string[] = ['A full stack web', 'developer based', 'in Miami.']
 
   return (
     <motion.span
@@ -94,3 +107,19 @@ function BottomRows() {
     </motion.span>
   )
 }
+
+// function ScrollDown() {
+//   return (
+//     <motion.div
+//       className={styles.scroll}
+//       variants={scrollCircleAnimation}
+//       initial="initial"
+//       animate="animate"
+//     >
+//       <span>
+//         scroll <br />
+//         down
+//       </span>
+//     </motion.div>
+//   )
+// }
