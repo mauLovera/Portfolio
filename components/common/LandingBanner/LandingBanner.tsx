@@ -1,5 +1,6 @@
 import styles from './LandingBanner.module.scss'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 //* === Variants === //
 
@@ -58,10 +59,10 @@ function TopRow() {
     >
       {[...text[0]].map((letter, idx) => (
         <motion.span key={idx} variants={letterAnimation}>
-          {letter} 
+          {letter}
         </motion.span>
       ))}
-      <div className={styles.space} />
+
       {[...text[1]].map((letter, idx) => (
         <motion.span
           key={idx}

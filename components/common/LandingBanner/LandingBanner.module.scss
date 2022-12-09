@@ -1,5 +1,23 @@
 @import '~styles/utilities/palette.scss';
 
+@mixin textScale {
+  @media (max-width: 1440px) {
+    font-size: 10.5vw;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 10vw;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 9.25vw;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 9vw;
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -9,8 +27,8 @@
     display: flex;
     flex-direction: column;
     font-size: $size_128px;
+    @include textScale;
     line-height: 1.25;
-
 
     .top {
       display: flex;
@@ -18,12 +36,17 @@
       overflow: hidden;
 
       .accent {
+        position: relative;
+        
+        //! Temporary Fix
+        left: 2.4vmin;
+
         color: red;
       }
     }
 
     .space {
-      margin-right: $size_32px;
+      width: 32px;
     }
 
     .bottom {
@@ -34,3 +57,5 @@
     }
   }
 }
+
+
