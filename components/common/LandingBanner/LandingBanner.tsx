@@ -1,19 +1,88 @@
 import styles from './LandingBanner.module.scss'
+import { motion } from 'framer-motion'
 
 interface Props {
-  top: string[]
-  bottom: string
+  topText: string[]
+  bottomText: string
 }
 
-export default function LandingBanner({ top, bottom }: Props) {
+//* === Variants === //
+
+const banner = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const letterAnimation = {
+  initial: { y: 400 },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1,
+    },
+  },
+}
+
+export default function LandingBanner({ topText, bottomText }: Props) {
   return (
     <section className={styles.container}>
-      <h1>
-        <span className={styles.top}>
-          {top[0]} <span className={styles.accent}>{top[1]}</span>
-        </span>
-        <span className={styles.bottom}>{bottom}</span>
-      </h1>
+      <motion.h1 variants={banner}>
+        <TopRow text={topText} />
+        <BottomRow text={bottomText} />
+      </motion.h1>
     </section>
+  )
+}
+
+interface Text {
+  text: string[] | string
+}
+
+function TopRow({ text }: Text) {
+  return (
+    <motion.span
+      className={styles.top}
+      variants={banner}
+      initial="initial"
+      animate="animate"
+    >
+      {[...text[0]].map((letter, idx) => (
+        <motion.span key={idx} variants={letterAnimation}>
+          {letter}
+        </motion.span>
+      ))}
+
+      {[...text[1]].map((letter, idx) => (
+        <motion.span
+          key={idx}
+          variants={letterAnimation}
+          className={styles.accent}
+        >
+          {letter}
+        </motion.span>
+      ))}
+    </motion.span>
+  )
+}
+
+function BottomRow({ text }: Text) {
+  return (
+    <motion.span
+      className={styles.bottom}
+      variants={banner}
+      initial="initial"
+      animate="animate"
+    >
+      {[...text].map((letter, idx) => (
+        <motion.span key={idx} variants={letterAnimation}>
+          {letter}
+        </motion.span>
+      ))}
+    </motion.span>
   )
 }

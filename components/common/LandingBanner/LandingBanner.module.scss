@@ -3,7 +3,6 @@
 .container {
   display: flex;
   justify-content: center;
-  width: 100%;
   max-width: $max-width;
 
   h1 {
@@ -12,8 +11,11 @@
     font-size: $size_128px;
     line-height: 1.25;
 
-    .top {
 
+    .top {
+      display: flex;
+      height: fit-content;
+      overflow: hidden;
 
       .accent {
         color: red;
@@ -21,6 +23,9 @@
     }
 
     .bottom {
+      display: inline-block;
+      height: fit-content;
+      overflow: hidden;
     }
   }
 }
