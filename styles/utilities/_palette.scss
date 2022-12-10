@@ -1,7 +1,7 @@
 //* === Sizing === // 
 
 @function toRem($value) {
-  $rem: (($value / 16)) + rem;
+  $rem: (($value / 16) * 1.25) + rem;
   @return $rem;
 }
 

@@ -9,24 +9,28 @@ interface Props {
 export default function Slides({ focus }: Props) {
   return (
     <motion.div className={styles.container}>
-      <motion.img
+      <Image
+        fill
         alt={focus}
         src={`/images/index-page/grimoire.png`}
         className={`${styles.image} ${
           focus === 'grimoire' ? styles.active : ''
         }`}
       />
-      <motion.img
+      <Image
+        fill
         alt={focus}
         src={`/images/index-page/swirl.png`}
         className={`${styles.image} ${focus === 'swirl' ? styles.active : ''}`}
       />
-      <motion.img
+      <Image
+        fill
         alt={focus}
         src={`/images/index-page/orbit.png`}
         className={`${styles.image} ${focus === 'orbit' ? styles.active : ''}`}
       />
-      <motion.img
+      <Image
+        fill
         alt={focus}
         src={`/images/index-page/tic-tac-toe.png`}
         className={`${styles.image} ${
