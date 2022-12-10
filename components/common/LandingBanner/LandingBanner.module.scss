@@ -49,9 +49,9 @@
         &::after {
           position: absolute;
           content: '';
-          bottom: $size_12px;
+          bottom: .5vmin;
           left: 0;
-          height: 10px;
+          height: 1vmin;
           background-color: red;
           animation-name: underline;
           animation-delay: 4s;
