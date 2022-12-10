@@ -12,11 +12,26 @@ interface Props {
     lineAnimation: Variants
     buttonAnimation: Variants
   }
+  mouseEnter: (text: string) => void
+  mouseExit: () => void
 }
 
-export default function Row({ title, tech, path, timeline, animation }: Props) {
+export default function Row({
+  title,
+  tech,
+  path,
+  timeline,
+  animation,
+  mouseEnter,
+  mouseExit,
+}: Props) {
   return (
-    <Link href={path} className={styles.container}>
+    <Link
+      href={path}
+      className={styles.container}
+      onMouseEnter={() => mouseEnter(title)}
+      onMouseLeave={mouseExit}
+    >
       <motion.span
         className={styles.titleContainer}
         variants={timeline}
@@ -36,10 +51,7 @@ export default function Row({ title, tech, path, timeline, animation }: Props) {
         whileInView={'animate'}
         className={styles.techContainer}
       >
-        <motion.span
-          variants={animation.lineAnimation}
-          className={styles.tech}
-        >
+        <motion.span variants={animation.lineAnimation} className={styles.tech}>
           {tech}
         </motion.span>
       </motion.span>

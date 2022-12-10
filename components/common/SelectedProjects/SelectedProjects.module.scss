@@ -32,10 +32,25 @@
   }
 
   .content {
-    padding-top: $size_24px;
     display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    padding-top: $size_52px;
+
     .images {
-      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+      width: 47.5%;
+      overflow: hidden;
+
+      .image {
+        position: absolute;
+        transform: scaleX(0);
+        transition-duration: 0.6s;
+        transform-origin: left;
+      }
     }
 
     .list {
@@ -45,16 +60,15 @@
       //! Focus Animation
       a {
         opacity: 1;
-        transition: opacity 0.5s;
+        transition: opacity 0.3s;
 
         &:hover {
-          opacity: 0.3;
+          opacity: 0.2;
         }
       }
-
       &:hover {
         a {
-          opacity: 0.3;
+          opacity: 0.2;
 
           &:hover {
             opacity: 1;
@@ -63,6 +77,12 @@
       }
     }
   }
+}
+
+//* === Image Animation === *//
+
+.active {
+  transform: scaleX(1) !important;
 }
 
 //* === Utility === *//
