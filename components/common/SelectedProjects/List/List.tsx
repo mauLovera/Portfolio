@@ -1,7 +1,7 @@
-import Row from '../Row/Row'
 import styles from './List.module.scss'
 import { Variants } from 'framer-motion'
 
+import Row from '../Row/Row'
 
 interface Props {
   timeline: Variants

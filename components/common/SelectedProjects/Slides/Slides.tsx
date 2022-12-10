@@ -6,23 +6,6 @@ interface Props {
   focus: string
 }
 
-//* === Variants === //
-
-const slideAnimation = {
-  initial: {
-    clipPath: 'inset(0 100% 0 0)',
-    transition: {
-      duration: 0.5,
-    },
-  },
-  animate: {
-    clipPath: 'inset(0 0 0 100%)',
-    transition: {
-      duration: 0.5,
-    },
-  },
-}
-
 export default function Slides({ focus }: Props) {
   return (
     <motion.div className={styles.container}>
