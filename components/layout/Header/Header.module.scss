@@ -3,9 +3,8 @@
 .container {
   display: flex;
   align-items: center;
-  height: calc($size_128px * .75);
+  height: $size_96px;
   max-width: $max-width;
-
   margin: auto;
 
   nav {
@@ -50,7 +49,7 @@
       @media (max-width: 940px) {
         display: none;
       }
-      
+
       justify-content: flex-end;
       gap: $size_32px;
       flex: 1;

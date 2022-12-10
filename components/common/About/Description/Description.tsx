@@ -32,7 +32,7 @@ export default function Description({ timeline, animation }: Props) {
         viewport={{ once: true }}
       >
         <motion.span variants={animation.lineAnimation}>
-          When I{"'"}m not programming you can find me with a guitar in hand,
+          When I{"'"}m not programming, you can find me with a guitar in hand,
           trekking through the city, or building sand castles with moats.
         </motion.span>
       </motion.p>

@@ -1,12 +1,12 @@
 @import '~styles/utilities/palette.scss';
 
 @mixin textScale {
-  @media (max-width: 1550px) {
-    font-size: 11vw;
+  @media (max-width: 1650px) {
+    font-size: 9vw;
   }
 
   @media (max-width: 1300px) {
-    font-size: 8.5vw;
+    font-size: 8vw;
   }
 
   @media (max-width: 500px) {
@@ -39,7 +39,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    font-size: $size_138px;
+    font-size: calc($size_128px);
     line-height: 1.25;
     @include textScale;
     letter-spacing: -1px;
