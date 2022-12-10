@@ -8,17 +8,19 @@
   @media (max-width: 1200px) {
     font-size: 10.5vw;
   }
+}
+
+@mixin paddingScale {
+  @media (max-width: 1200px) {
+    padding-bottom: $size_96px;
+  }
 
   @media (max-width: 800px) {
-    font-size: 10vw;
+    padding-bottom: $size_64px;
   }
 
   @media (max-width: 600px) {
-    font-size: 9.25vw;
-  }
-
-  @media (max-width: 400px) {
-    font-size: 9vw;
+    padding-bottom: $size_52px;
   }
 }
 
@@ -27,6 +29,7 @@
   justify-content: center;
   max-width: $max-width;
   padding-bottom: $size_128px;
+  @include paddingScale;
 
   h1 {
     position: relative;
