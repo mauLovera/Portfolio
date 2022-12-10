@@ -8,9 +8,9 @@ import ActiveLink from '@/components/common/ActiveLink/ActiveLink'
 export default function Header() {
   return (
     <motion.header
-      initial={{ opacity: 0, y: -120 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ ease: 'easeInOut', duration: 0.7, delay: 2 }}
+      initial={{ y: -120 }}
+      animate={{ y: 0 }}
+      transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1.5, delay: 2 }}
       className={styles.container}
     >
       <nav>

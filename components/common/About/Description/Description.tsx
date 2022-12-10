@@ -14,19 +14,34 @@ interface Props {
 export default function Description({ timeline, animation }: Props) {
   return (
     <div className={styles.container}>
-      <motion.p variants={timeline} initial="initial" whileInView={'animate'}>
+      <motion.p
+        variants={timeline}
+        initial="initial"
+        whileInView={'animate'}
+        viewport={{ once: true }}
+      >
         <motion.span variants={animation.lineAnimation}>
           Hello, I{"'"}m a full stack web developer with a passion for
           programming and an eye for design.
         </motion.span>
       </motion.p>
-      <motion.p variants={timeline} initial="initial" whileInView={'animate'}>
+      <motion.p
+        variants={timeline}
+        initial="initial"
+        whileInView={'animate'}
+        viewport={{ once: true }}
+      >
         <motion.span variants={animation.lineAnimation}>
           When I{"'"}m not programming you can find me with a guitar in hand,
           trekking through the city, or building sand castles with moats.
         </motion.span>
       </motion.p>
-      <motion.p variants={timeline} initial="initial" whileInView={'animate'}>
+      <motion.p
+        variants={timeline}
+        initial="initial"
+        whileInView={'animate'}
+        viewport={{ once: true }}
+      >
         <motion.span
           variants={animation.lineAnimation}
           className={styles.accent}

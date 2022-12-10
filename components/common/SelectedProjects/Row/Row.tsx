@@ -37,6 +37,7 @@ export default function Row({
         variants={timeline}
         initial="initial"
         whileInView={'animate'}
+        viewport={{ once: true }}
       >
         <motion.span
           variants={animation.lineAnimation}
@@ -49,6 +50,7 @@ export default function Row({
         variants={timeline}
         initial="initial"
         whileInView={'animate'}
+        viewport={{ once: true }}
         className={styles.techContainer}
       >
         <motion.span variants={animation.lineAnimation} className={styles.tech}>
@@ -59,6 +61,7 @@ export default function Row({
         variants={timeline}
         initial="initial"
         whileInView={'animate'}
+        viewport={{ once: true }}
         className={styles.button}
       >
         <motion.span

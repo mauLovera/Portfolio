@@ -10,19 +10,19 @@
     
     overflow: hidden;
     height: fit-content;
+    font-size: $size_16px;
 
     @media (max-width: 1440px) {
-      font-size: $size_18px;
       max-width: 25rem;
     }
 
     @media (max-width: 1250px) {
-      font-size: $size_16px;
+      font-size: $size_14px;
       max-width: 25rem;
     }
 
     @media (max-width: 605px) {
-      font-size: $size_14px;
+      font-size: $size_12px;
       max-width: 95%;
     }
   }

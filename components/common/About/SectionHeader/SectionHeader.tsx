@@ -13,6 +13,7 @@ export default function SectionHeader({ text, animation, timeline }: Props) {
       variants={timeline}
       initial="initial"
       whileInView={'animate'}
+      viewport={{ once: true }}
       className={styles.container}
     >
       {[...text[0]].map((letter, idx) => (

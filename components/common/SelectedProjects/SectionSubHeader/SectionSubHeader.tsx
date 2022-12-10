@@ -22,6 +22,7 @@ export default function SectionSubHeader({ timeline, animation }: Props) {
       variants={timeline}
       initial="initial"
       whileInView={'animate'}
+      viewport={{ once: true }}
       className={styles.container}
     >
       <motion.span variants={animation.lineAnimation}>
