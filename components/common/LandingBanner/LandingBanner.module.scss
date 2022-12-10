@@ -5,7 +5,11 @@
     font-size: 11vw;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1300px) {
+    font-size: 9.2vw;
+  }
+
+  @media (max-width: 500px) {
     font-size: 10.5vw;
   }
 }
@@ -36,8 +40,8 @@
     display: flex;
     flex-direction: column;
     font-size: $size_138px;
-    @include textScale;
     line-height: 1.25;
+    @include textScale;
     letter-spacing: -1px;
 
     .top {
