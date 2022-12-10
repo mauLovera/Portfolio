@@ -9,6 +9,7 @@ import {
 
 import styles from './About.module.scss'
 import SectionHeader from './SectionHeader/SectionHeader'
+import Description from './Description/Description'
 
 export default function About() {
   const text: string[] = ['About']
@@ -19,6 +20,7 @@ export default function About() {
         animation={letterAnimation}
         timeline={letterTimeline}
       />
+      <Description animation={lineAnimation} timeline={letterTimeline} />
     </motion.section>
   )
 }

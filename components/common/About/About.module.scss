@@ -14,16 +14,31 @@
   }
 }
 
+@mixin gapScale {
+  @media (max-width: 1200px) {
+    gap: $size_96px;
+  }
+
+  @media (max-width: 800px) {
+    gap: $size_64px;
+  }
+
+  @media (max-width: 600px) {
+    gap: $size_52px;
+  }
+}
+
 .container {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
-
+  
   max-width: $max-width;
   width: 100%;
-
+  
+  gap: $size_24px;
   padding-block: $size_128px;
   border-top: $divider-border;
   @include paddingScale;
 
-  
 }

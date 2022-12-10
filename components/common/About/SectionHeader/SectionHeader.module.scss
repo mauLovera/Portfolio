@@ -1,5 +1,10 @@
+@import '~styles/utilities/_palette.scss';
+
 .container {
   display: flex;
   overflow: hidden;
   height: fit-content;
+  width: fit-content;
+  font-size: $size_32px;
+  flex-shrink: 0;
 }

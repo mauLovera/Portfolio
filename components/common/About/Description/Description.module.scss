@@ -1,0 +1,23 @@
+@import '~styles/utilities/_palette.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $size_16px;
+  max-width: 35rem;
+  p {
+    display: flex;
+    overflow: hidden;
+    height: fit-content;
+
+    @media (max-width: 1440px) {
+      font-size: $size_14px;
+      max-width: 25rem;
+    }
+
+    @media (max-width: 605px) {
+      font-size: $size_12px;
+      max-width: 20rem;
+    }
+  }
+}
