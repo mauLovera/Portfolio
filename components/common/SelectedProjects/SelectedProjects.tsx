@@ -7,9 +7,9 @@ import styles from './SelectedProjects.module.scss'
 
 //* === Components === */
 import SectionSubHeader from './SectionSubHeader/SectionSubHeader'
-import SectionHeader from './SectionHeader/SectionHeader'
 import List from './List/List'
 import Slides from './Slides/Slides'
+import SectionHeader from './SectionHeader/SectionHeader'
 
 //* === Variants === //
 import {
@@ -19,7 +19,6 @@ import {
   letterTimeline,
   lineAnimation,
 } from './variants'
-
 
 export default function SelectedProjects() {
   const [focus, setFocus] = useState<string>('')

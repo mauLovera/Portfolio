@@ -25,10 +25,7 @@ export default function SectionHeader({ timeline, animation }: Props) {
       ))}
       <div className={styles.spaced} />
       {[...text[1]].map((letter, idx) => (
-        <motion.span
-          key={idx}
-          variants={animation.letterAnimation}
-        >
+        <motion.span key={idx} variants={animation.letterAnimation}>
           {letter}
         </motion.span>
       ))}

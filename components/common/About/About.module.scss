@@ -1,0 +1,29 @@
+@import '~styles/utilities/_palette.scss';
+
+@mixin paddingScale {
+  @media (max-width: 1200px) {
+    padding-block: $size_96px;
+  }
+
+  @media (max-width: 800px) {
+    padding-block: $size_64px;
+  }
+
+  @media (max-width: 600px) {
+    padding-block: $size_52px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  max-width: $max-width;
+  width: 100%;
+
+  padding-block: $size_128px;
+  border-top: $divider-border;
+  @include paddingScale;
+
+  
+}
