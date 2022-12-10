@@ -5,7 +5,15 @@
 
 body {
   @include ff-primary;
-  padding-inline: $padding-desktop;
+
+  padding-inline: $padding-large;
+  @media (max-width: 840px){
+    padding-inline: $padding-mid;
+  }
+  @media (max-width: 600px){
+    padding-inline: $padding-small;
+  }
+
   background-color: whitesmoke;
 }
 

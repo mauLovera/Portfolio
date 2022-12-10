@@ -15,14 +15,26 @@
 
     .name {
       display: flex;
-      width: 20%;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+      padding-right: $size_64px;
+      @media (max-width: 940px) {
+        padding-right: $size_12px;
+      }
     }
 
     .title {
       display: flex;
       align-items: center;
       gap: $size_8px;
-      width: 40%;
+      @media (max-width: 940px) {
+        flex: 1;
+      }
+      span {
+        @media (max-width: 940px) {
+          display: none;
+        }
+      }
 
       a {
         display: flex;
@@ -32,6 +44,10 @@
 
     .links {
       display: flex;
+      @media (max-width: 940px) {
+        display: none;
+      }
+      
       justify-content: flex-end;
       gap: $size_32px;
       flex: 1;

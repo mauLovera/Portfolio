@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import ActiveLink from '@/components/common/ActiveLink/ActiveLink'
+import { motion } from 'framer-motion'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import styles from './Header.module.scss'
 
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { motion } from 'framer-motion'
+import ActiveLink from '@/components/common/ActiveLink/ActiveLink'
 
 export default function Header() {
   return (

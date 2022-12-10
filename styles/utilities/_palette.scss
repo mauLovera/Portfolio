@@ -31,7 +31,10 @@ $size_640px: toRem(640);
 $size_768px: toRem(768);
 $size_960px: toRem(960);
 
-$padding-desktop: $size_32px;
+$padding-large: $size_32px;
+$padding-mid: $size_24px;
+$padding-small: $size_16px;
+
 $max-width: 1600px;
 $divider-border: 1px solid rgba(0, 0, 0, 0.2);
 $transition-speed: 0.5s;
@@ -39,7 +42,7 @@ $transition-speed: 0.5s;
 //* === Color === //
 
 $accent-clr: red;
-$inactive-clr: rgba(128, 128, 128, 0.75);
+$inactive-clr: rgba(128, 128, 128, 0.5);
 
 //* === Fonts === //
 

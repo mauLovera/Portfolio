@@ -36,7 +36,7 @@ const underlineAnimation = {
 }
 
 const lineAnimation = {
-  initial: { y: 600 },
+  initial: { y: 650 },
   animate: {
     y: 0,
     transition: {
