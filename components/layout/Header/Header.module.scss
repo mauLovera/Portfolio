@@ -3,7 +3,7 @@
 .container {
   display: flex;
   align-items: center;
-  height: $size_128px;
+  height: calc($size_128px * .75);
   max-width: $max-width;
 
   margin: auto;
