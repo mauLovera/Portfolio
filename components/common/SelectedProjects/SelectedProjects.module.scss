@@ -41,6 +41,26 @@
     .list {
       width: 50%;
       counter-reset: number;
+
+      //! Focus Animation
+      a {
+        opacity: 1;
+        transition: opacity 0.5s;
+
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+
+      &:hover {
+        a {
+          opacity: 0.3;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }
