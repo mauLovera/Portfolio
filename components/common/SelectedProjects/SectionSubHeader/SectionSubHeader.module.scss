@@ -3,23 +3,25 @@
 .container {
   display: flex;
   height: fit-content;
-  flex-wrap: wrap;
   overflow: hidden;
   max-width: 35rem;
-  // background-color: red;
 
   @media (max-width: 1440px) {
-    font-size: $size_14px;
+    font-size: $size_16px;
     max-width: 25rem;
   }
 
   @media (max-width: 605px) {
-    font-size: $size_12px;
+    font-size: $size_14px;
     max-width: 20rem;
   }
 }
 
 .accent {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: max-content;
   position: relative;
   color: $accent-clr;
   &:hover {
@@ -34,10 +36,9 @@
 .arrow {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: relative;
   height: fit-content;
-  bottom: -2px;
-  right: -36px;
+  right: -$size_4px;
   font-size: $size_24px;
   color: black;
   scale: 1;
