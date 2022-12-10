@@ -1,0 +1,25 @@
+@mixin focusAnimation {
+  a {
+    opacity: 1;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.2;
+    }
+  }
+  &:hover {
+    a {
+      opacity: 0.2;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.container {
+  width: 50%;
+  counter-reset: number;
+  @include focusAnimation;
+}

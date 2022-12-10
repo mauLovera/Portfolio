@@ -6,6 +6,7 @@
 body {
   @include ff-primary;
   padding-inline: $padding-desktop;
+  background-color: whitesmoke;
 }
 
 p {

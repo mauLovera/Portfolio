@@ -7,6 +7,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Row from './Row/Row'
 import { useState } from 'react'
+import List from './List/List'
+import Slides from './Slides/Slides'
 
 //* === Variants === //
 
@@ -66,7 +68,7 @@ export default function SelectedProjects() {
   const [focus, setFocus] = useState<string>('')
 
   function handleMouseEnter(text: string): void {
-    setFocus(text)
+    setFocus(text.toLowerCase())
   }
 
   function handleMouseExit(): void {
@@ -86,70 +88,13 @@ export default function SelectedProjects() {
         />
       </div>
       <div className={styles.content}>
-        <div className={styles.images}>
-          <motion.img
-            src="/images/index-page/grimoire.png"
-            className={`${styles.image} ${
-              focus === 'Grimoire' ? styles.active : ''
-            }`}
-          />
-          <motion.img
-            src="/images/index-page/swirl.png"
-            className={`${styles.image} ${
-              focus === 'Swirl' ? styles.active : ''
-            }`}
-          />
-          <motion.img
-            src="/images/index-page/orbit.png"
-            className={`${styles.image} ${
-              focus === 'Orbit' ? styles.active : ''
-            }`}
-          />
-          <motion.img
-            src="/images/index-page/tic-tac-toe.png"
-            className={`${styles.image} ${
-              focus === 'Tic-Tac-Toe' ? styles.active : ''
-            }`}
-          />
-        </div>
-        <div className={styles.list}>
-          <Row
-            title="Grimoire"
-            animation={{ lineAnimation, buttonAnimation }}
-            path="/projects/grimoire"
-            timeline={timeline}
-            tech={['Next.js / Sass / JavaScript / Vercel']}
-            mouseEnter={handleMouseEnter}
-            mouseExit={handleMouseExit}
-          />
-          <Row
-            title="Swirl"
-            animation={{ lineAnimation, buttonAnimation }}
-            path="/projects/swirl"
-            timeline={timeline}
-            tech={['Django / PostgreSQL / JavaScript / Heroku']}
-            mouseEnter={handleMouseEnter}
-            mouseExit={handleMouseExit}
-          />
-          <Row
-            title="Orbit"
-            animation={{ lineAnimation, buttonAnimation }}
-            path="/projects/orbit"
-            timeline={timeline}
-            tech={['Node.js / MongoDB / Express / Heroku']}
-            mouseEnter={handleMouseEnter}
-            mouseExit={handleMouseExit}
-          />
-          <Row
-            title="Tic-Tac-Toe"
-            animation={{ lineAnimation, buttonAnimation }}
-            path="/projects/tic-tac-toe"
-            timeline={timeline}
-            tech={['Next.js / TypeScript / Sass / Vercel']}
-            mouseEnter={handleMouseEnter}
-            mouseExit={handleMouseExit}
-          />
-        </div>
+        <Slides focus={focus} />
+        <List
+          animation={{ lineAnimation, buttonAnimation }}
+          handleMouseEnter={handleMouseEnter}
+          handleMouseExit={handleMouseExit}
+          timeline={timeline}
+        />
       </div>
     </section>
   )

@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  width: 50%;
+  height: 640px;
+
+  overflow: hidden;
+
+  .image {
+    // display: none;
+    position: absolute;
+    object-fit: contain;
+    height: 100%;
+    left: 0;
+    
+    transform: scale(1.1);
+    clip-path: inset(0 100% 0 0%);
+    transition: 0.5s;
+  }
+
+  .active {
+    display: block !important;
+    clip-path: inset(0 0 0 0) !important;
+    transform: scale(1) !important;
+    z-index: 100;
+  }
+}

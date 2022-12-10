@@ -36,54 +36,7 @@
     justify-content: space-between;
     height: fit-content;
     padding-top: $size_52px;
-
-    .images {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      position: relative;
-      width: 50%;
-      overflow: hidden;
-
-      .image {
-        height: 100%;
-        position: absolute;
-        transform: scaleX(0);
-        transition-duration: 0.6s;
-        transform-origin: left;
-      }
-    }
-
-    .list {
-      width: 50%;
-      counter-reset: number;
-
-      //! Focus Animation
-      a {
-        opacity: 1;
-        transition: opacity 0.3s;
-
-        &:hover {
-          opacity: 0.2;
-        }
-      }
-      &:hover {
-        a {
-          opacity: 0.2;
-
-          &:hover {
-            opacity: 1;
-          }
-        }
-      }
-    }
   }
-}
-
-//* === Image Animation === *//
-
-.active {
-  transform: scaleX(1) !important;
 }
 
 //* === Utility === *//
