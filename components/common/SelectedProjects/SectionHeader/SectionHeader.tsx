@@ -1,15 +1,32 @@
 import { motion, Variants } from 'framer-motion'
+import styles from './SectionHeader.module.scss'
 
 interface Props {
   timeline: Variants
-  animation: Variants
+  animation: {
+    lineAnimation: Variants
+    letterAnimation: Variants
+  }
 }
 
 export default function SectionHeader({ timeline, animation }: Props) {
-  const text: string[] = ['Selected Projects']
+  const text: string[] = ['Selected', ' Projects']
   return (
     <motion.h2 variants={timeline} initial="initial" whileInView={'animate'}>
-      <motion.span variants={animation}>{text[0]}</motion.span>
+      {[...text[0]].map((letter, idx) => (
+        <motion.span key={idx} variants={animation.letterAnimation}>
+          {letter}
+        </motion.span>
+      ))}
+      {[...text[1]].map((letter, idx) => (
+        <motion.span
+          key={idx}
+          variants={animation.letterAnimation}
+          className={styles.spaced}
+        >
+          {letter}
+        </motion.span>
+      ))}
     </motion.h2>
   )
 }

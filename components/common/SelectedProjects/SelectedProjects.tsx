@@ -19,8 +19,28 @@ const timeline = {
   },
 }
 
+const letterTimeline = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.025,
+    },
+  },
+}
+
 const lineAnimation = {
   initial: { y: 200 },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1,
+    },
+  },
+}
+
+const letterAnimation = {
+  initial: { y: 400 },
   animate: {
     y: 0,
     transition: {
@@ -56,7 +76,10 @@ export default function SelectedProjects() {
   return (
     <section className={styles.container}>
       <div className={styles.heading}>
-        <SectionHeader timeline={timeline} animation={lineAnimation} />
+        <SectionHeader
+          timeline={letterTimeline}
+          animation={{ lineAnimation, letterAnimation }}
+        />
         <SectionSubHeader
           timeline={timeline}
           animation={{ lineAnimation, buttonAnimation }}
