@@ -59,24 +59,29 @@ export default function SelectedProjects() {
             animation={{ lineAnimation, buttonAnimation }}
             path="/projects/grimoire"
             timeline={timeline}
+            tech={['Next.js / Sass / JavaScript / Vercel']}
           />
           <Row
             title="Swirl"
             animation={{ lineAnimation, buttonAnimation }}
             path="/projects/swirl"
             timeline={timeline}
+            tech={['Django / PostgreSQL / JavaScript / Heroku']}
+
           />
           <Row
             title="Orbit"
             animation={{ lineAnimation, buttonAnimation }}
             path="/projects/orbit"
             timeline={timeline}
+            tech={['Node.js / MongoDB / Express / Heroku']}
           />
           <Row
             title="Tic-Tac-Toe"
             animation={{ lineAnimation, buttonAnimation }}
             path="/projects/tic-tac-toe"
             timeline={timeline}
+            tech={['Next.js / TypeScript / Sass / Vercel']}
           />
         </div>
       </div>

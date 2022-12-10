@@ -9,6 +9,7 @@
   border-bottom: $divider-border;
 
   .titleContainer {
+    width: 40%;
     display: flex;
     height: fit-content;
     overflow: hidden;
@@ -17,13 +18,29 @@
       display: flex;
       align-items: center;
       &::before {
-        color: $inactive-clr;
-        font-size: $size_12px;
         counter-increment: number;
-        content: '0'counter(number);
+        content: '0' counter(number);
         margin-right: $size_8px;
         margin-bottom: $size_12px;
+
+        color: $inactive-clr;
+        font-size: $size_12px;
       }
+    }
+  }
+
+  .techContainer {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    overflow: hidden;
+
+    .tech {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: $size_12px;
     }
   }
 
@@ -42,6 +59,17 @@
       }
     }
   }
+  
+  &::after {
+    content: '';
+    height: 1px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: width .5s;
+  }
 
   &:hover {
     .arrow {
@@ -50,6 +78,10 @@
         scale: 1.1;
         color: $accent-clr;
       }
+    }
+
+    &::after {
+      width: 100%;
     }
   }
 }

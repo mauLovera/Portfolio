@@ -5,6 +5,7 @@ import { RiArrowRightCircleFill } from 'react-icons/ri'
 
 interface Props {
   title: string
+  tech: string[]
   path: string
   timeline: Variants
   animation: {
@@ -13,7 +14,7 @@ interface Props {
   }
 }
 
-export default function Row({ title, path, timeline, animation }: Props) {
+export default function Row({ title, tech, path, timeline, animation }: Props) {
   return (
     <Link href={path} className={styles.container}>
       <motion.span
@@ -27,6 +28,19 @@ export default function Row({ title, path, timeline, animation }: Props) {
           className={styles.title}
         >
           {title}
+        </motion.span>
+      </motion.span>
+      <motion.span
+        variants={timeline}
+        initial="initial"
+        whileInView={'animate'}
+        className={styles.techContainer}
+      >
+        <motion.span
+          variants={animation.lineAnimation}
+          className={styles.tech}
+        >
+          {tech}
         </motion.span>
       </motion.span>
       <motion.span
