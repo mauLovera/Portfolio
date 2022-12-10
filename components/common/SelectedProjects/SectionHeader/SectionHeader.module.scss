@@ -1,4 +1,25 @@
+@import '~styles/utilities/_palette.scss';
+
+.container {
+  display: flex;
+  height: fit-content;
+  overflow: hidden;
+  font-size: $size_64px;
+  letter-spacing: -1px;
+  width: fit-content;
+
+  @media (max-width: 1440px) {
+    font-size: $size_52px;
+  }
+  @media (max-width: 1100px) {
+    font-size: $size_48px;
+  }
+
+  @media (max-width: 605px) {
+    font-size: $size_38px;
+  }
+}
+
 .spaced {
-  position: relative;
-  left: 3vmin;
+  margin-left: 2vmin;
 }

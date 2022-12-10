@@ -28,9 +28,10 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    font-size: $size_128px;
+    font-size: $size_138px;
     @include textScale;
     line-height: 1.25;
+    letter-spacing: -1px;
 
     .top {
       display: flex;
@@ -49,7 +50,7 @@
         &::after {
           position: absolute;
           content: '';
-          bottom: .5vmin;
+          bottom: 0.5vmin;
           left: 0;
           height: 1vmin;
           background-color: red;

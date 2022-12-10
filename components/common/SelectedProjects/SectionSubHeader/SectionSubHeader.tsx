@@ -17,7 +17,12 @@ export default function SectionSubHeader({ timeline, animation }: Props) {
     ' projects page.',
   ]
   return (
-    <motion.p variants={timeline} initial="initial" whileInView={'animate'}>
+    <motion.p
+      variants={timeline}
+      initial="initial"
+      whileInView={'animate'}
+      className={styles.container}
+    >
       <motion.span variants={animation.lineAnimation}>
         {text[0]}
         <Link href={'/projects'} className={styles.accent}>

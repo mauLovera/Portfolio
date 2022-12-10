@@ -14,28 +14,15 @@
     display: flex;
     flex-direction: column;
     gap: $size_8px;
-    width: fit-content;
-
-    h2 {
-      display: flex;
-      height: fit-content;
-      overflow: hidden;
-      font-size: $size_64px;
-    }
-
-    p {
-      display: flex;
-      height: fit-content;
-      overflow: hidden;
-      max-width: 35rem;
-    }
+    width: max-content;
   }
 
   .content {
     display: flex;
     justify-content: space-between;
-    height: fit-content;
+    flex: 1 0 auto;
     padding-top: $size_52px;
+    gap: $size_16px;
   }
 }
 

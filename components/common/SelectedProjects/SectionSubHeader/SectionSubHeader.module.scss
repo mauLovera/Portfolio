@@ -1,5 +1,24 @@
 @import '~styles/utilities/_palette.scss';
 
+.container {
+  display: flex;
+  height: fit-content;
+  flex-wrap: wrap;
+  overflow: hidden;
+  max-width: 35rem;
+  // background-color: red;
+
+  @media (max-width: 1440px) {
+    font-size: $size_14px;
+    max-width: 25rem;
+  }
+
+  @media (max-width: 605px) {
+    font-size: $size_12px;
+    max-width: 20rem;
+  }
+}
+
 .accent {
   position: relative;
   color: $accent-clr;
@@ -13,9 +32,12 @@
 }
 
 .arrow {
+  display: flex;
+  align-items: center;
   position: absolute;
-  right: -25%;
-  top: -40%;
+  height: fit-content;
+  bottom: -2px;
+  right: -36px;
   font-size: $size_24px;
   color: black;
   scale: 1;

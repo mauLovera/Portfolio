@@ -12,17 +12,22 @@ interface Props {
 export default function SectionHeader({ timeline, animation }: Props) {
   const text: string[] = ['Selected', ' Projects']
   return (
-    <motion.h2 variants={timeline} initial="initial" whileInView={'animate'}>
+    <motion.h2
+      variants={timeline}
+      initial="initial"
+      whileInView={'animate'}
+      className={styles.container}
+    >
       {[...text[0]].map((letter, idx) => (
         <motion.span key={idx} variants={animation.letterAnimation}>
           {letter}
         </motion.span>
       ))}
+      <div className={styles.spaced} />
       {[...text[1]].map((letter, idx) => (
         <motion.span
           key={idx}
           variants={animation.letterAnimation}
-          className={styles.spaced}
         >
           {letter}
         </motion.span>

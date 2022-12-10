@@ -20,6 +20,9 @@
 
 .container {
   width: 50%;
+  @media (max-width: 780px) {
+    width: 100%;
+  }
   counter-reset: number;
   @include focusAnimation;
 }
