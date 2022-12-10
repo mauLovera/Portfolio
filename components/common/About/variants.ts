@@ -1,7 +1,7 @@
 export const timeline = {
   animate: {
     transition: {
-      delayChildren: 0,
+      delayChildren: 1,
       staggerChildren: 0.5,
     },
   },

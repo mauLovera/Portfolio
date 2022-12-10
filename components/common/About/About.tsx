@@ -20,7 +20,10 @@ export default function About() {
         animation={letterAnimation}
         timeline={letterTimeline}
       />
-      <Description animation={lineAnimation} timeline={letterTimeline} />
+      <Description
+        animation={{ lineAnimation, buttonAnimation }}
+        timeline={letterTimeline}
+      />
     </motion.section>
   )
 }

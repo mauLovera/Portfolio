@@ -4,9 +4,10 @@
   display: flex;
   flex-direction: column;
   gap: $size_16px;
-  max-width: 35rem;
+  max-width: 50%;
   p {
     display: flex;
+    
     overflow: hidden;
     height: fit-content;
 
@@ -17,7 +18,43 @@
 
     @media (max-width: 605px) {
       font-size: $size_12px;
-      max-width: 20rem;
+      max-width: 95%;
+    }
+  }
+  @media (max-width: 800px) {
+    max-width: 95%;
+  }
+}
+
+.accent {
+  display: flex;
+  align-items: center;
+  gap: $size_4px;
+  color: $accent-clr;
+  &:hover {
+    svg {
+      transition: $transition-speed;
+      color: $accent-clr;
+      scale: 1.1;
     }
   }
 }
+
+.arrow {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  font-size: $size_24px;
+  color: black;
+  scale: 1;
+
+  svg {
+    transition: $transition-speed;
+    &:hover {
+      scale: 1.1;
+      color: $accent-clr;
+    }
+  }
+}
+
+
