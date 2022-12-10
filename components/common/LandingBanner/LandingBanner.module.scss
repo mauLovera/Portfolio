@@ -44,6 +44,29 @@
         left: 3vmin;
 
         color: $accent-clr;
+
+        //! Underline Animation
+        &::after {
+          position: absolute;
+          content: '';
+          bottom: $size_12px;
+          left: 0;
+          height: 10px;
+          background-color: red;
+          animation-name: underline;
+          animation-delay: 4s;
+          animation-duration: 1s;
+          animation-fill-mode: forwards;
+
+          @keyframes underline {
+            from {
+              width: 0;
+            }
+            to {
+              width: 100%;
+            }
+          }
+        }
       }
     }
 
