@@ -26,7 +26,7 @@ export default function Header() {
           </Link>
         </div>
         <div className={styles.links}>
-          <ActiveLink text="Projects" url="projects" ammount="2" />
+          <ActiveLink text="Projects" url="projects" ammount="4" />
           <ActiveLink text="About" url="about" />
           <ActiveLink text="Contact" url="contact" />
         </div>
