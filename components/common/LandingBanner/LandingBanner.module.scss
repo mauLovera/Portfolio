@@ -2,20 +2,24 @@
 
 @mixin textScale {
   @media (max-width: 1650px) {
-    font-size: 9vw;
+    font-size: 11vw;
   }
 
   @media (max-width: 1300px) {
-    font-size: 8vw;
+    font-size: 10.5vw;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 10.25vw;
   }
 
   @media (max-width: 500px) {
-    font-size: 11vw;
+    font-size: 10vw;
   }
 }
 
 @mixin paddingScale {
-  @media (max-width: 1200px) {
+  @media (max-width: 1300px) {
     padding-bottom: $size_96px;
   }
 
@@ -39,7 +43,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    font-size: calc($size_128px);
+    font-size: calc($size_138px);
     line-height: 1.25;
     @include textScale;
     letter-spacing: -1px;

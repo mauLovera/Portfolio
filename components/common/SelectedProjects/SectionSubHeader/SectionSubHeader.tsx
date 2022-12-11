@@ -13,9 +13,9 @@ interface Props {
 
 export default function SectionSubHeader({ timeline, animation }: Props) {
   const text: string[] = [
-    'Below is a few of my most recent projects.',
-    'To view all of my work, head over to the',
-    ' projects page.',
+    'Below is a few of my most recent projects. ',
+    'To view all of my work, head over to the ',
+    'projects page.',
   ]
   return (
     <motion.p
@@ -27,8 +27,6 @@ export default function SectionSubHeader({ timeline, animation }: Props) {
     >
       <motion.span variants={animation.lineAnimation}>
         {text[0]}
-        <br />
-
         {text[1]}
         <Link href={'/projects'} className={styles.accent}>
           {text[2]}

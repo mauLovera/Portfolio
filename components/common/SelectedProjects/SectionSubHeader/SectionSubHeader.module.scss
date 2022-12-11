@@ -16,12 +16,16 @@
     font-size: $size_12px;
     max-width: 20rem;
   }
+
+  @media (max-width: 400px) {
+    font-size: $size_12px;
+    max-width: 17.5rem;
+  }
 }
 
 .accent {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  flex-shrink: 0;
   width: max-content;
   position: relative;
   color: $accent-clr;

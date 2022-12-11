@@ -18,6 +18,10 @@
   @media (max-width: 605px) {
     font-size: $size_32px;
   }
+
+  @media (max-width: 480px) {
+    font-size: $size_24px;
+  }
 }
 
 .spaced {

@@ -7,13 +7,12 @@ import ActiveLink from '@/components/common/ActiveLink/ActiveLink'
 
 export default function Header() {
   return (
-    <motion.header
-      initial={{ y: -120 }}
-      animate={{ y: 0 }}
-      transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1.5, delay: 2 }}
-      className={styles.container}
-    >
-      <nav>
+    <header className={styles.container}>
+      <motion.nav
+        initial={{ y: (120 * -1), opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: 'easeInOut', duration: 1.5, delay: 2 }}
+      >
         <div className={styles.name}>
           <Link href={'/'}>Mauricio Lovera</Link>
         </div>
@@ -31,7 +30,7 @@ export default function Header() {
           <ActiveLink text="About" url="about" />
           <ActiveLink text="Contact" url="contact" />
         </div>
-      </nav>
-    </motion.header>
+      </motion.nav>
+    </header>
   )
 }
