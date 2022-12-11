@@ -6,7 +6,7 @@
   overflow: hidden;
   font-size: $size_64px;
   letter-spacing: -1px;
-  width: fit-content;
+  width: 100%;
 
   @media (max-width: 1440px) {
     font-size: $size_52px;
@@ -15,12 +15,12 @@
     font-size: $size_48px;
   }
 
-  @media (max-width: 605px) {
-    font-size: $size_32px;
+  @media (max-width: 630px) {
+    font-size: $size_38px;
   }
 
   @media (max-width: 480px) {
-    font-size: $size_24px;
+    font-size: $size_32px;
   }
 }
 
