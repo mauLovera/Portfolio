@@ -1,0 +1,34 @@
+@import '~styles/utilities/palette.scss';
+
+@mixin paddingScale {
+  @media (max-width: 1300px) {
+    padding-bottom: $size_96px;
+  }
+
+  @media (max-width: 800px) {
+    padding-bottom: $size_64px;
+  }
+
+  @media (max-width: 600px) {
+    padding-bottom: $size_52px;
+  }
+}
+
+.container {
+  position: relative;
+  left: -12px;
+
+  display: flex;
+  height: fit-content;
+  overflow: hidden;
+  
+  padding-top: $size_64px;
+  font-size: $size_138px;
+  letter-spacing: -5px;
+
+  span {
+    display: flex;
+    overflow: hidden;
+    height: fit-content;
+  }
+}

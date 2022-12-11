@@ -1,0 +1,8 @@
+@import '~styles/utilities/palette.scss';
+
+.container {
+  display: flex;
+
+  width: 100%;
+  max-width: $max-width;
+}
