@@ -1,0 +1,27 @@
+@import '~styles/utilities/palette.scss';
+
+@mixin fontScale {
+  @media (max-width: 1650px) {
+    font-size: $size_14px;
+  }
+
+  @media (max-width: 1000px) {
+    max-width: 25rem;
+  }
+
+  @media (max-width: 800px) {
+    max-width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  height: fit-content;
+  overflow: hidden;
+
+  font-size: $size_16px;
+  max-width: 30rem;
+  line-height: 1.5;
+
+  @include fontScale;
+}

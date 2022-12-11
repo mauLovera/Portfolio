@@ -1,34 +1,40 @@
 @import '~styles/utilities/palette.scss';
 
-@mixin paddingScale {
+@mixin fontScale {
+  @media (max-width: 1650px) {
+    font-size: 11vw;
+  }
+
   @media (max-width: 1300px) {
-    padding-bottom: $size_96px;
+    font-size: 10.5vw;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 10.25vw;
   }
 
   @media (max-width: 800px) {
-    padding-bottom: $size_64px;
-  }
-
-  @media (max-width: 600px) {
-    padding-bottom: $size_52px;
+    font-size: 12vw;
   }
 }
 
 .container {
   position: relative;
-  left: -12px;
 
   display: flex;
+  flex-shrink: 0;
+  align-items: center;
   height: fit-content;
   overflow: hidden;
   
-  padding-top: $size_64px;
   font-size: $size_138px;
-  letter-spacing: -5px;
+  @include fontScale;
+  letter-spacing: -1px;
 
   span {
     display: flex;
     overflow: hidden;
     height: fit-content;
+    flex-shrink: 0;
   }
 }
