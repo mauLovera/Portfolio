@@ -3,10 +3,30 @@
 .container {
   display: flex;
   flex: 1;
-  background-color: black;
+  border-top: $divider-border;
+  padding-top: $size_16px;
 
   @media (max-width: 800px) {
     width: 100%;
     height: $size_384px;
+  }
+  counter-reset: number;
+
+
+  .projectNumber {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: $size_12px;
+    color: $grey-clr;
+
+    .ascendingNumber {
+      
+
+      &::before {
+        counter-increment: number;
+        content: '/00-' counter(number);
+      }
+    } 
   }
 }
