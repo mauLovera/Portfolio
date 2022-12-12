@@ -6,11 +6,12 @@
   }
 
   @media (max-width: 1000px) {
-    max-width: 25rem;
+    max-width: 20rem;
   }
 
   @media (max-width: 800px) {
     max-width: 100%;
+    font-size: $size_12px;
   }
 }
 

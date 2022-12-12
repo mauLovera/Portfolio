@@ -12,7 +12,7 @@ export default function Slides({ focus }: Props) {
       <Image
         fill
         alt={focus}
-        src={`/images/index-page/grimoire.png`}
+        src={`/images/project-images/grimoire.png`}
         className={`${styles.image} ${
           focus === 'grimoire' ? styles.active : ''
         }`}
@@ -20,19 +20,19 @@ export default function Slides({ focus }: Props) {
       <Image
         fill
         alt={focus}
-        src={`/images/index-page/swirl.png`}
+        src={`/images/project-images/swirl.png`}
         className={`${styles.image} ${focus === 'swirl' ? styles.active : ''}`}
       />
       <Image
         fill
         alt={focus}
-        src={`/images/index-page/orbit.png`}
+        src={`/images/project-images/orbit.png`}
         className={`${styles.image} ${focus === 'orbit' ? styles.active : ''}`}
       />
       <Image
         fill
         alt={focus}
-        src={`/images/index-page/tic-tac-toe.png`}
+        src={`/images/project-images/tic-tac-toe.png`}
         className={`${styles.image} ${
           focus === 'tic-tac-toe' ? styles.active : ''
         }`}

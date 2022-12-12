@@ -1,0 +1,12 @@
+@import '~styles/utilities/palette.scss';
+
+.container {
+  display: flex;
+  flex: 1;
+  background-color: black;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    height: $size_384px;
+  }
+}

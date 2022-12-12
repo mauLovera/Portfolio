@@ -1,0 +1,26 @@
+@import '~styles/utilities/palette.scss';
+
+@mixin heightScale {
+  @media (max-width: 1600px) {
+    height: 40vw;
+  }
+
+ 
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    height: fit-content;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: $size_24px;
+
+  height: $size_420px;
+  @include heightScale;
+
+  max-width: $max-width;
+  width: 100%;
+}
