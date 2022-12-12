@@ -1,5 +1,6 @@
 //* === Components === *//
 import Image from 'next/image'
+import Link from 'next/link'
 
 //* === Styles & Utils === *//
 import styles from './ProjectImage.module.scss'
@@ -11,11 +12,13 @@ interface Props {
 export default function ProjectImage({ title }: Props) {
   return (
     <div className={styles.container}>
-      <Image
-        alt={title}
-        src={`/images/project-images/${title.toLowerCase()}.png`}
-        fill
-      ></Image>
+      <Link href={`/projects/${title.toLowerCase()}`}>
+        <Image
+          alt={title}
+          src={`/images/project-images/${title.toLowerCase()}.png`}
+          fill
+        ></Image>
+      </Link>
     </div>
   )
 }

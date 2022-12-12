@@ -1,4 +1,5 @@
 //* === Components === *//
+import Link from 'next/link'
 import { RiArrowRightCircleFill } from 'react-icons/ri'
 
 //* === Styles & Utils === *//
@@ -18,10 +19,12 @@ export default function Description({ title, description, tech }: Props) {
           <span className={styles.ascendingNumber}></span>
           <span>/00-4</span>
         </div>
-        <div className={styles.title}>
-          <h2>{title}</h2>
-          <RiArrowRightCircleFill />
-        </div>
+        <Link href={`/projects/${title.toLowerCase()}`}>
+          <div className={styles.title}>
+            <h2>{title}</h2>
+            <RiArrowRightCircleFill />
+          </div>
+        </Link>
         <p>{description}</p>
         <p>{tech}</p>
       </div>
