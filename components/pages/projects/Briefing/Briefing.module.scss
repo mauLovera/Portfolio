@@ -28,6 +28,16 @@
       color: $grey-clr;
     }
 
+    @media (max-width: 600px) {
+      h3 {
+        font-size: $size_14px;
+      }
+
+      span {
+        font-size: $size_12px;
+      }
+    }
+
   }
 
 }
