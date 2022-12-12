@@ -1,3 +1,4 @@
+//* === Styles & Utils === *//
 import { motion, Variants } from 'framer-motion'
 import styles from './SectionHeader.module.scss'
 

@@ -1,7 +1,10 @@
+//* === Components === *//
 import Link from 'next/link'
+import { RiArrowRightCircleFill } from 'react-icons/ri'
+
+//* === Styles & Utils === *//
 import styles from './Row.module.scss'
 import { motion, Variants } from 'framer-motion'
-import { RiArrowRightCircleFill } from 'react-icons/ri'
 
 interface Props {
   title: string

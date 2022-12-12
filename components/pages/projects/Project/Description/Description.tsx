@@ -1,4 +1,7 @@
+//* === Components === *//
 import { RiArrowRightCircleFill } from 'react-icons/ri'
+
+//* === Styles & Utils === *//
 import styles from './Description.module.scss'
 
 interface Props {

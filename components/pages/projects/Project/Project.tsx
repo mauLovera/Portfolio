@@ -1,5 +1,8 @@
+//* === Components === *//
 import ProjectImage from './ProjectImage/ProjectImage'
 import Description from './Description/Description'
+
+//* === Styles & Utils === *//
 import styles from './Project.module.scss'
 
 interface Props {

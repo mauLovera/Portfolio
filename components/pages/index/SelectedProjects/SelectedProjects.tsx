@@ -1,17 +1,14 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import { animate, motion } from 'framer-motion'
-import { RiArrowRightCircleFill } from 'react-icons/ri'
-import styles from './SelectedProjects.module.scss'
-
-//* === Components === */
+//* === Components === *//
 import SectionSubHeader from './SectionSubHeader/SectionSubHeader'
 import List from './List/List'
 import Slides from './Slides/Slides'
 import SectionHeader from './SectionHeader/SectionHeader'
 
-//* === Variants === //
+//* === Styles & Utils === *//
+import styles from './SelectedProjects.module.scss'
+import { useState } from 'react'
+
+//* === Variants === *//
 import {
   timeline,
   buttonAnimation,
@@ -22,11 +19,11 @@ import {
 
 export default function SelectedProjects() {
   const [focus, setFocus] = useState<string>('')
-
+  
   function handleMouseEnter(text: string): void {
     setFocus(text.toLowerCase())
   }
-
+  
   function handleMouseExit(): void {
     setFocus('')
   }

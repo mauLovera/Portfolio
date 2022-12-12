@@ -1,9 +1,8 @@
+//* === Styles & Utils === *//
 import styles from './LandingBanner.module.scss'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 //* === Variants === //
-
 const banner = {
   animate: {
     transition: {
@@ -12,7 +11,6 @@ const banner = {
     },
   },
 }
-
 const letterAnimation = {
   initial: { y: 400 },
   animate: {
@@ -23,7 +21,6 @@ const letterAnimation = {
     },
   },
 }
-
 const underlineAnimation = {
   initial: { y: 400 },
   animate: {
@@ -34,7 +31,6 @@ const underlineAnimation = {
     },
   },
 }
-
 const lineAnimation = {
   initial: { y: 650 },
   animate: {

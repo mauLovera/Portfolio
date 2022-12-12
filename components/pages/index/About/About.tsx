@@ -1,3 +1,9 @@
+//* === Components === *//
+import SectionHeader from './SectionHeader/SectionHeader'
+import Description from './Description/Description'
+
+//* === Styles & Utils === *//
+import styles from './About.module.scss'
 import { motion } from 'framer-motion'
 import {
   letterAnimation,
@@ -6,10 +12,6 @@ import {
   timeline,
   letterTimeline,
 } from './variants'
-
-import styles from './About.module.scss'
-import SectionHeader from './SectionHeader/SectionHeader'
-import Description from './Description/Description'
 
 export default function About() {
   const text: string[] = ['About']

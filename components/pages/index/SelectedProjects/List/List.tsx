@@ -1,7 +1,9 @@
+//* === Components === *//
+import Row from '../Row/Row'
+
+//* === Styles & Utils === *//
 import styles from './List.module.scss'
 import { Variants } from 'framer-motion'
-
-import Row from '../Row/Row'
 
 interface Props {
   timeline: Variants

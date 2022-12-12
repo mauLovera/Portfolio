@@ -1,4 +1,7 @@
+//* === Components === *//
 import Image from 'next/image'
+
+//* === Styles & Utils === *//
 import styles from './ProjectImage.module.scss'
 
 interface Props {

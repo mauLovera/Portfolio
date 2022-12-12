@@ -1,8 +1,12 @@
-import PageBanner from '@/components/common/PageBanner/PageBanner'
+//* === Components === *//
 import Layout from '@/components/layout/Layout'
-import Project from '@/components/projects/Display/Project'
+import PageBanner from '@/components/common/PageBanner/PageBanner'
+import Project from '@/components/pages/projects/Project/Project'
+
+//* === Styles & Utils === *//
 import styles from '@/styles/pages/projects.module.scss'
 
+interface Props {}
 export default function ProjectsPage() {
   return (
     <Layout>

@@ -41,6 +41,10 @@
       justify-content: space-between;
       width: 100%;
       font-size: $size_24px;
+
+      h2 {
+        letter-spacing: -1px;
+      }
     }
 
     p {
@@ -49,6 +53,10 @@
 
       &:last-of-type {
         color: $grey-clr;
+      }
+
+      @media (max-width: 605px) {
+        font-size: $size_12px;
       }
     }
   }

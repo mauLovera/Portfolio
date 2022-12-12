@@ -1,4 +1,7 @@
+//* === Components === *//
 import Link from 'next/link'
+
+//* === Styles & Misc. === *//
 import styles from './ActiveLink.module.scss'
 import { NextRouter, useRouter } from 'next/router'
 

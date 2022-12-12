@@ -1,7 +1,9 @@
-import { motion } from 'framer-motion'
+//* === Components === *//
 import Description from './Description/Description'
-import styles from './PageBanner.module.scss'
 import SectionHeader from './SectionHeader/SectionHeader'
+
+//* === Styles & Utils. === *//
+import styles from './PageBanner.module.scss'
 
 export default function PageBanner() {
   return (

@@ -1,4 +1,7 @@
+//* === Components === *//
 import Image from 'next/image'
+
+//* === Styles & Utils === *//
 import { motion } from 'framer-motion'
 import styles from './Slides.module.scss'
 

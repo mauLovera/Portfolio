@@ -1,9 +1,11 @@
+//* === Components === *//
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import styles from './Header.module.scss'
-
 import ActiveLink from '@/components/common/ActiveLink/ActiveLink'
+
+//* === Styles & Utils === *//
+import { motion } from 'framer-motion'
+import styles from './Header.module.scss'
 
 export default function Header() {
   return (

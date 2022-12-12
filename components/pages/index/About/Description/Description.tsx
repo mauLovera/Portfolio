@@ -1,6 +1,9 @@
-import { motion, Variants } from 'framer-motion'
+//* === Components === *//
 import Link from 'next/link'
 import { RiArrowRightCircleFill } from 'react-icons/ri'
+
+//* === Styles & Utils === *//
+import { motion, Variants } from 'framer-motion'
 import styles from './Description.module.scss'
 
 interface Props {

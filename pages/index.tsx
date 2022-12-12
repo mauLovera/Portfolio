@@ -1,11 +1,13 @@
+//* === Components === *//
 import Layout from '@/components/layout/Layout'
-import LandingBanner from '@/components/common/LandingBanner/LandingBanner'
-import SelectedProjects from '@/components/common/SelectedProjects/SelectedProjects'
-import About from '@/components/common/About/About'
+import About from '@/components/pages/index/About/About'
+import LandingBanner from '@/components/pages/index/LandingBanner/LandingBanner'
+import SelectedProjects from '@/components/pages/index/SelectedProjects/SelectedProjects'
 
+//* === Styles & Utils === *//
 import styles from '@/styles/pages/index.module.scss'
-interface Props {}
 
+interface Props {}
 export default function HomePage() {
   return (
     <Layout>

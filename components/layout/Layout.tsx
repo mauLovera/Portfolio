@@ -1,6 +1,9 @@
+//* === Components === *//
 import Head from 'next/head'
 import Header from '@/components/layout/Header/Header'
 import Footer from '@/components/layout/Footer/Footer'
+
+//* === Styles & Utils === *//
 import styles from './Layout.module.scss'
 
 import { ReactNode } from 'react'
