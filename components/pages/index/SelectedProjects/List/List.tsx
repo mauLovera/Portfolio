@@ -37,7 +37,7 @@ export default function List({
         animation={animation}
         path="/projects/swirl"
         timeline={timeline}
-        tech={['Django / PostgreSQL / JavaScript / Heroku']}
+        tech={['Django / PostgreSQL / Docker / Heroku']}
         mouseEnter={handleMouseEnter}
         mouseExit={handleMouseExit}
       />

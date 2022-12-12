@@ -9,7 +9,7 @@ import styles from '@/styles/pages/projects.module.scss'
 interface Props {}
 export default function ProjectsPage() {
   return (
-    <Layout>
+    <Layout home={false}>
       <PageBanner />
       <div className={styles.list}>
         <Project
@@ -19,18 +19,18 @@ export default function ProjectsPage() {
         />
         <Project
           title="Swirl"
-          description="A DnD 5th edition application used for searching through classes, monsters, and spells."
-          tech="Next.js / Sass / JavaScript / Vercel"
+          description="A music application that allows for creating and sharing playlists with other users."
+          tech="Django / PostgreSQL / Docker / Heroku"
         />
         <Project
           title="Orbit"
-          description="A DnD 5th edition application used for searching through classes, monsters, and spells."
-          tech="Next.js / Sass / JavaScript / Vercel"
+          description="A video game social media platform utilizing the RAWG.io API, to seach, collect, and display collections of video games."
+          tech="Node.js / MongoDB / Express / Heroku"
         />
         <Project
           title="Tic-Tac-Toe"
-          description="A DnD 5th edition application used for searching through classes, monsters, and spells."
-          tech="Next.js / Sass / JavaScript / Vercel"
+          description="A rendition of the classic Tic-Tac-Toe game."
+          tech="Next.js / TypeScript / Sass / Vercel"
         />
       </div>
     </Layout>

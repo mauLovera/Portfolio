@@ -7,13 +7,17 @@ import ActiveLink from '@/components/common/ActiveLink/ActiveLink'
 import { motion } from 'framer-motion'
 import styles from './Header.module.scss'
 
-export default function Header() {
+interface Props {
+  home: boolean
+}
+
+export default function Header({ home }: Props) {
   return (
     <header className={styles.container}>
       <motion.nav
-        initial={{ y: (120 * -1), opacity: 0 }}
+        initial={{ y: 120 * -1, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ ease: 'easeInOut', duration: 1.5, delay: 2 }}
+        transition={{ ease: 'easeInOut', duration: 1.5, delay: home ? 2 : 0 }}
       >
         <div className={styles.name}>
           <Link href={'/'}>Mauricio Lovera</Link>

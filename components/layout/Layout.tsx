@@ -12,6 +12,7 @@ interface Props {
   description: string
   keywords: string
   children: ReactNode
+  home: boolean
 }
 
 export default function Layout({
@@ -19,6 +20,7 @@ export default function Layout({
   description,
   keywords,
   children,
+  home,
 }: Props) {
   return (
     <>
@@ -28,7 +30,7 @@ export default function Layout({
         <meta name="keywords" content={keywords} />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header home={home} />
       <main className={styles.container}>{children}</main>
       <Footer />
     </>
@@ -37,6 +39,7 @@ export default function Layout({
 
 Layout.defaultProps = {
   title: 'Mauricio Lovera | Full Stack Web Developer',
-  description: 'Portfolio website for Mauricio Lovera | Full Stack Web Developer',
+  description:
+    'Portfolio website for Mauricio Lovera | Full Stack Web Developer',
   keywords: 'portfolio, full stack, web developer',
 }
