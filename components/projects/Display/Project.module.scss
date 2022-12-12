@@ -3,24 +3,25 @@
 @mixin heightScale {
   @media (max-width: 1600px) {
     height: 40vw;
+    gap: $size_32px;
   }
-
- 
 
   @media (max-width: 800px) {
     flex-direction: column;
     height: fit-content;
+    gap: 0;
   }
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  gap: $size_24px;
+  gap: $size_64px;
 
-  height: $size_420px;
+  height: $size_384px;
   @include heightScale;
 
   max-width: $max-width;
   width: 100%;
+  counter-increment: number;
 }

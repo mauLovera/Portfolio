@@ -2,31 +2,54 @@
 
 .container {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 1;
   border-top: $divider-border;
-  padding-top: $size_16px;
-
+  padding-block: $size_16px;
+  
   @media (max-width: 800px) {
     width: 100%;
     height: $size_384px;
+    border-top: none;
+    border-bottom: $divider-border;
+    padding-block: $size_32px;
   }
-  counter-reset: number;
 
-
-  .projectNumber {
+  .top {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    font-size: $size_12px;
-    color: $grey-clr;
+    flex-direction: column;
+    gap: $size_16px;
 
-    .ascendingNumber {
-      
+    .projectNumber {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      font-size: $size_12px;
+      color: $grey-clr;
 
-      &::before {
-        counter-increment: number;
-        content: '/00-' counter(number);
+      .ascendingNumber {
+        &::before {
+          content: '/00-' counter(number);
+        }
       }
-    } 
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-size: $size_24px;
+    }
+
+    p {
+      font-size: $size_14px;
+      max-width: 30rem;
+
+      &:last-of-type {
+        color: $grey-clr;
+      }
+    }
   }
 }

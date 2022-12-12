@@ -9,7 +9,7 @@ export default function ProjectImage({ title }: Props) {
   return (
     <div className={styles.container}>
       <Image
-        src={`/images/project-images/${title.toLowerCase()}.png`}
+        alt={title}
         src={`/images/project-images/${title.toLowerCase()}.png`}
         fill
       ></Image>

@@ -1,0 +1,9 @@
+@import "~styles/utilities/_palette.scss";
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $size_128px;
+  max-width: $max-width;
+  width: 100%;
+}
