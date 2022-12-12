@@ -10,7 +10,12 @@ interface Props {}
 export default function ProjectsPage() {
   return (
     <Layout home={false}>
-      <PageBanner />
+      <PageBanner
+        title={'Projects'}
+        description={
+          'A collection of my most notable projects and explorations in web development.'
+        }
+      />
       <div className={styles.list}>
         <Project
           title="Grimoire"

@@ -18,9 +18,10 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/styles/*": ["styles/*"],
+      "@/lib/*": ["lib/*"],
       "@/public/*": ["public/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/projects/[slug].js"],
   "exclude": ["node_modules"]
 }

@@ -2,7 +2,17 @@ import styles from './Description.module.scss'
 import { motion } from 'framer-motion'
 import { lineAnimation, timeline } from '../variants'
 
-export default function Description() {
+interface Props {
+  description: string
+  deployment?: string
+  github?: string
+}
+
+export default function Description({
+  description,
+  deployment,
+  github,
+}: Props) {
   return (
     <motion.p
       className={styles.container}
@@ -10,10 +20,7 @@ export default function Description() {
       animate="animate"
       initial="initial"
     >
-      <motion.span variants={lineAnimation}>
-        A collection of my most notable <span>projects</span> and
-        <span> explorations</span> in web development.
-      </motion.span>
+      <motion.span variants={lineAnimation}>{description}</motion.span>
     </motion.p>
   )
 }

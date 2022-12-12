@@ -1,0 +1,37 @@
+@import '~styles/utilities/palette.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: $size_32px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: $size_24px;
+  }
+
+  padding-block: $size_32px;
+  border-block: $divider-border;
+
+  max-width: $max-width;
+  width: 100%;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: $size_4px; 
+
+    h3 {
+      color: $grey-clr;
+    }
+
+  }
+
+}
+
+.grey {
+  color: $grey-clr;
+}

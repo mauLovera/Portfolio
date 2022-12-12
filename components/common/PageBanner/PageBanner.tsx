@@ -5,11 +5,27 @@ import SectionHeader from './SectionHeader/SectionHeader'
 //* === Styles & Utils. === *//
 import styles from './PageBanner.module.scss'
 
-export default function PageBanner() {
+interface Props {
+  title: string
+  description: string
+  deployment?: string
+  github?: string
+}
+
+export default function PageBanner({
+  title,
+  description,
+  deployment,
+  github,
+}: Props) {
   return (
     <div className={styles.container}>
-      <SectionHeader />
-      <Description />
+      <SectionHeader title={title} />
+      <Description
+        description={description}
+        deployment={deployment}
+        github={github}
+      />
     </div>
   )
 }
