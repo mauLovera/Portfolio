@@ -25,7 +25,7 @@ export default function Briefing({
       </div>
       <div className={styles.row}>
         <h3>Contributors</h3>
-        {contributors.map((contributor, idx) => (
+        {contributors?.map((contributor, idx) => (
           <div key={idx}>
             <h4 className={styles.grey}>{contributor.title}</h4>
             <span>{contributor.name}</span>

@@ -4,13 +4,31 @@ import { useRouter } from 'next/router'
 import PageBanner from '@/components/common/PageBanner/PageBanner'
 import Briefing from '@/components/pages/projects/Briefing/Briefing'
 
-export default function ProjectPage() {
-  const router = useRouter()
+interface Project {
+  project: [
+    {
+      title: string
+      slug: string
+      briefDescription: string
+      deployment: string
+      github: string
+      timeline: string
+      type: string
+      contributors: {
+        title: string
+        name: string
+      }[]
+      tech: string
+    }
+  ]
+}
 
-  const project = projects.filter((proj) => proj.slug === router.query.slug)
+export default function ProjectPage({ project }: Project) {
+  const router = useRouter()
 
   return (
     <Layout home={false}>
+      sfsfs
       <PageBanner
         title={project[0].title}
         description={project[0].briefDescription}
@@ -23,4 +41,14 @@ export default function ProjectPage() {
       />
     </Layout>
   )
+}
+
+export const getServerSideProps = async (context: any) => {
+  const project = projects.filter((proj) => proj.slug === context.query.slug)
+
+  return {
+    props: {
+      project,
+    },
+  }
 }
