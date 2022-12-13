@@ -7,12 +7,14 @@ interface Props {
   description: string
   deployment?: string
   github?: string
+  linkedIn?: string
 }
 
 export default function Description({
   description,
   deployment,
   github,
+  linkedIn
 }: Props) {
   return (
     <motion.p
@@ -28,6 +30,19 @@ export default function Description({
           <motion.span className={styles.links} variants={lineAnimation}>
             <Link href={deployment ? deployment : '/'} className={styles.link}>
               Deployment
+            </Link>
+            <Link href={github ? github : '/'} className={styles.link}>
+              GitHub
+            </Link>
+          </motion.span>
+        </>
+      )}
+
+      {linkedIn && github && (
+        <>
+          <motion.span className={styles.links} variants={lineAnimation}>
+            <Link href={linkedIn ? linkedIn : '/'} className={styles.link}>
+              LinkedIn
             </Link>
             <Link href={github ? github : '/'} className={styles.link}>
               GitHub

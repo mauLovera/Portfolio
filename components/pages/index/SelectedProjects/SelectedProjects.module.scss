@@ -23,7 +23,7 @@
 
   padding-block: $size_128px;
   @include paddingScale;
-  border-block: $divider-border;
+  border-top: $divider-border;
 
   .heading {
     display: flex;

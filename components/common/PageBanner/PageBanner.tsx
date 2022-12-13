@@ -10,6 +10,7 @@ interface Props {
   description: string
   deployment?: string
   github?: string
+  linkedIn?: string
 }
 
 export default function PageBanner({
@@ -17,6 +18,7 @@ export default function PageBanner({
   description,
   deployment,
   github,
+  linkedIn
 }: Props) {
   return (
     <div className={styles.container}>
@@ -25,6 +27,7 @@ export default function PageBanner({
         description={description}
         deployment={deployment}
         github={github}
+        linkedIn={linkedIn}
       />
     </div>
   )

@@ -4,9 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: $size_128px;  
-  width: 100%;
+  height: $size_128px; 
+  max-width: $max-width;
   gap: $size_12px;
+  border-top: $divider-border;
+  margin: auto;
 
   a {
     transition: color $transition-speed;

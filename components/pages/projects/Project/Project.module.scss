@@ -24,4 +24,10 @@
   max-width: $max-width;
   width: 100%;
   counter-increment: number;
+
+  @media (max-width: 800px) {
+    &:last-child > div {
+      border: unset;
+    }
+  }
 }
