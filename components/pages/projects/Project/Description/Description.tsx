@@ -4,6 +4,38 @@ import { RiArrowRightCircleFill } from 'react-icons/ri'
 
 //* === Styles & Utils === *//
 import styles from './Description.module.scss'
+import { motion } from 'framer-motion'
+
+const timeline = {
+  animate: {
+    transition: {
+      // delayChildren: 0.4,
+      staggerChildren: 0.05,
+    },
+  },
+}
+
+const letterAnimation = {
+  initial: { y: 400 },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: .8,
+    },
+  },
+}
+
+const lineAnimation = {
+  initial: { y: 200 },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1,
+    },
+  },
+}
 
 interface Props {
   title: string
@@ -20,8 +52,12 @@ export default function Description({ title, description, tech }: Props) {
           <span>/00-4</span>
         </div>
         <Link href={`/projects/${title.toLowerCase()}`}>
-          <div className={styles.title}>
-            <h2>{title}</h2>
+          <div className={styles.title} >
+            <motion.h2 variants={timeline} initial='initial' whileInView={'animate'} viewport={{ once: true }}>
+              <motion.span variants={lineAnimation} >
+                {title}
+              </motion.span>
+            </motion.h2>
             <RiArrowRightCircleFill className={styles.arrow} />
           </div>
         </Link>

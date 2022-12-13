@@ -55,7 +55,7 @@ export default function List({
         animation={animation}
         path="/projects/tic-tac-toe"
         timeline={timeline}
-        tech={['Next.js / TypeScript / Sass / Vercel']}
+        tech={['HTML 5 / CSS 3 / JavaScript / Netlify']}
         mouseEnter={handleMouseEnter}
         mouseExit={handleMouseExit}
       />

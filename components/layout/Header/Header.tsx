@@ -8,7 +8,7 @@ import { delay, motion } from 'framer-motion'
 import styles from './Header.module.scss'
 
 //* === Variants * === //
-const banner = {
+const timeline = {
   animate: {
     transition: {
       // staggerChildren: 0.1,
@@ -36,7 +36,7 @@ export default function Header({ home }: Props) {
   return (
     <header className={styles.container}>
       <motion.nav
-        variants={banner}
+        variants={timeline}
         initial="initial"
         animate="animate"
         transition={{ delay: home ? 2 : 0 }}

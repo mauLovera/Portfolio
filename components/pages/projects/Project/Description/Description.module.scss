@@ -36,17 +36,25 @@
     }
 
     a {
+      overflow: hidden;
       .title {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         font-size: $size_24px;
+        overflow: hidden;
 
         transition: $transition-speed;
         h2 {
+          display: flex;
           letter-spacing: -1px;
+          overflow: hidden;
+          span {
+            overflow: hidden;
+          }
         }
+
         .arrow {
           transition: $transition-speed;
         }
