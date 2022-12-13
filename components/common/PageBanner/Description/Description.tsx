@@ -1,6 +1,7 @@
 import styles from './Description.module.scss'
 import { motion } from 'framer-motion'
 import { lineAnimation, timeline } from '../variants'
+import Link from 'next/link'
 
 interface Props {
   description: string
@@ -21,6 +22,19 @@ export default function Description({
       initial="initial"
     >
       <motion.span variants={lineAnimation}>{description}</motion.span>
+
+      {deployment && github && (
+        <>
+          <motion.span className={styles.links} variants={lineAnimation}>
+            <Link href={deployment ? deployment : '/'} className={styles.link}>
+              Deployment
+            </Link>
+            <Link href={github ? github : '/'} className={styles.link}>
+              GitHub
+            </Link>
+          </motion.span>
+        </>
+      )}
     </motion.p>
   )
 }

@@ -36,6 +36,8 @@ export default function ProjectPage({ project }: Project) {
       <PageBanner
         title={project[0].title}
         description={project[0].briefDescription}
+        deployment={project[0].deployment}
+        github={project[0].github}
       />
       <Briefing
         timeline={project[0].timeline}

@@ -17,6 +17,8 @@
 
 .container {
   display: flex;
+  gap: $size_16px;
+  flex-direction: column;
   height: fit-content;
   overflow: hidden;
 
@@ -25,4 +27,28 @@
   line-height: 1.5;
 
   @include fontScale;
+
+  .links {
+    display: flex;
+    gap: $size_4px;
+    flex-direction: column;
+    width: 100%;
+
+    .link {
+      text-decoration: underline;
+      display: flex;
+      gap: $size_4px;
+      align-items: baseline;
+      width: fit-content;
+      transition: $transition-speed;
+      svg {
+        display: flex;
+        align-items: center;
+      }
+
+      &:hover {
+        color: $accent-clr;
+      }
+    }
+  }
 }

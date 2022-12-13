@@ -34,6 +34,7 @@
     flex-direction: row;
     height: fit-content;
     border-bottom: $divider-border;
+    text-align: right;
 
     img {
       width: 70%;
@@ -56,6 +57,7 @@
 
     &:nth-child(even) {
       flex-direction: row-reverse;
+      text-align: left;
     }
 
     @media (max-width: 1000px) {
@@ -84,10 +86,6 @@
             counter-increment: number;
           }
         }
-      }
-
-      &:nth-child(even) {
-        flex-direction: column;
       }
     }
   }
