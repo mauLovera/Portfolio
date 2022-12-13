@@ -87,6 +87,9 @@
           }
         }
       }
+      &:nth-child(even) {
+        flex-direction: column;
+      }
     }
   }
 }
