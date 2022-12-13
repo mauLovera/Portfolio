@@ -22,7 +22,7 @@ export default function Description({ title, description, tech }: Props) {
         <Link href={`/projects/${title.toLowerCase()}`}>
           <div className={styles.title}>
             <h2>{title}</h2>
-            <RiArrowRightCircleFill />
+            <RiArrowRightCircleFill className={styles.arrow} />
           </div>
         </Link>
         <p>{description}</p>

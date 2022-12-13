@@ -7,7 +7,7 @@
   flex: 1;
   border-top: $divider-border;
   padding-block: $size_16px;
-  
+
   @media (max-width: 800px) {
     width: 100%;
     height: $size_384px;
@@ -35,15 +35,28 @@
       }
     }
 
-    .title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      font-size: $size_24px;
+    a {
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: $size_24px;
 
-      h2 {
-        letter-spacing: -1px;
+        transition: $transition-speed;
+        h2 {
+          letter-spacing: -1px;
+        }
+        .arrow {
+          transition: $transition-speed;
+        }
+      }
+      &:hover {
+        color: $accent-clr;
+        .arrow {
+          transform: scale(1.1);
+          color: $accent-clr;
+        }
       }
     }
 
