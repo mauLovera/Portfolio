@@ -1,0 +1,94 @@
+@import '~styles/utilities/palette.scss';
+
+@mixin heightScale {
+  @media (max-width: 1600px) {
+    height: 40vw;
+    gap: $size_32px;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    height: fit-content;
+    gap: 0;
+  }
+}
+
+.container {
+  position: relative;
+
+  display: flex;
+  gap: $size_64px;
+  @media (max-width: 1000px) {
+    gap: $size_32px;
+  }
+  flex-direction: column;
+  max-width: $max-width;
+  width: 100%;
+  padding-block: $size_32px;
+  counter-reset: number;
+
+  .row {
+    display: flex;
+    gap: $size_32px;
+    align-items: center;
+    flex-direction: row;
+    height: fit-content;
+    border-bottom: $divider-border;
+
+    img {
+      width: 70%;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column-reverse;
+      flex: 1;
+      justify-content: space-between;
+      font-size: $size_24px;
+      .count {
+        color: $grey-clr;
+        &::before {
+          content: '0' counter(number);
+          counter-increment: number;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: $size_8px;
+      border-bottom: unset;
+
+      img {
+        width: 100%;
+      }
+
+      div {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: $size_16px;
+        border-bottom: $divider-border;
+        width: 100%;
+        justify-content: space-between;
+        font-size: $size_16px;
+
+        .count {
+          color: $grey-clr;
+          &::before {
+            content: '/0' counter(number);
+            counter-increment: number;
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+  }
+}

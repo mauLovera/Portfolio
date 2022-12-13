@@ -3,6 +3,7 @@ import Layout from '@/components/layout/Layout'
 import { useRouter } from 'next/router'
 import PageBanner from '@/components/common/PageBanner/PageBanner'
 import Briefing from '@/components/pages/projects/Briefing/Briefing'
+import Gallery from '@/components/pages/projects/Gallery/Gallery'
 
 interface Project {
   project: [
@@ -18,7 +19,11 @@ interface Project {
         title: string
         name: string
       }[]
-      tech: string
+      tech: string,
+      images: {
+        url: string,
+        description: string
+      }[]
     }
   ]
 }
@@ -28,7 +33,6 @@ export default function ProjectPage({ project }: Project) {
 
   return (
     <Layout home={false}>
-      sfsfs
       <PageBanner
         title={project[0].title}
         description={project[0].briefDescription}
@@ -39,6 +43,7 @@ export default function ProjectPage({ project }: Project) {
         contributors={project[0].contributors}
         tech={project[0].tech}
       />
+      <Gallery images={project[0].images} />
     </Layout>
   )
 }

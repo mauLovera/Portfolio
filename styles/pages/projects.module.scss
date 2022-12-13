@@ -4,6 +4,12 @@
   display: flex;
   flex-direction: column;
   gap: $size_128px;
+  @media (max-width: 800px) {
+    gap: $size_64px;
+  }
+  @media (max-width: 600px) {
+    gap: $size_24px;
+  }
   max-width: $max-width;
   width: 100%;
 }
