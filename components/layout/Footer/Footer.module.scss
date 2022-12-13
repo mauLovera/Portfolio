@@ -1,3 +1,17 @@
+@import '~styles/utilities/palette.scss';
+
 .container {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $size_128px;  
+  width: 100%;
+  gap: $size_12px;
+
+  a {
+    transition: color $transition-speed;
+    &:hover {
+      color: $accent-clr;
+    }
+  }
 }
