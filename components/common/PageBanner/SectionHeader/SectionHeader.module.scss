@@ -38,3 +38,27 @@
     flex-shrink: 0;
   }
 }
+
+
+@mixin fontScaleLarge {
+  @media (max-width: 1650px) {
+    font-size: 9vw;
+  }
+
+  @media (max-width: 1300px) {
+    font-size: 8vw;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 8vw;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 10vw;
+  }
+}
+
+#large {
+  font-size: $size_128px;
+  @include fontScaleLarge;
+}

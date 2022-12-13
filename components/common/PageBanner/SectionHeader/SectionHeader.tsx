@@ -13,6 +13,7 @@ export default function SectionHeader({ title }: Props) {
   return (
     <motion.h1
       className={styles.container}
+      id={title.length > 7 ? styles.large : ''}
       variants={timeline}
       animate="animate"
       initial="initial"
