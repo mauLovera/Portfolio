@@ -4,25 +4,47 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import ActiveLink from '@/components/common/ActiveLink/ActiveLink'
 
 //* === Styles & Utils === *//
-import { motion } from 'framer-motion'
+import { delay, motion } from 'framer-motion'
 import styles from './Header.module.scss'
+
+//* === Variants * === //
+const banner = {
+  animate: {
+    transition: {
+      // staggerChildren: 0.1,
+    },
+  },
+}
 
 interface Props {
   home: boolean
 }
 
 export default function Header({ home }: Props) {
+  const lineAnimation = {
+    initial: { y: 200 },
+    animate: {
+      y: 0,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.5,
+        delay: home ? 3 : 0
+      },
+    },
+  }
+
   return (
     <header className={styles.container}>
       <motion.nav
-        initial={{ y: 120 * -1, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ ease: 'easeInOut', duration: 1.5, delay: home ? 2 : 0 }}
+        variants={banner}
+        initial="initial"
+        animate="animate"
+        transition={{ delay: home ? 2 : 0 }}
       >
-        <div className={styles.name}>
+        <motion.div className={styles.name} variants={lineAnimation}>
           <Link href={'/'}>Mauricio Lovera</Link>
-        </div>
-        <div className={styles.title}>
+        </motion.div>
+        <motion.div className={styles.title} variants={lineAnimation}>
           <span>Full Stack Web Developer</span>
           <Link href={'https://github.com/mauLovera'}>
             <FaGithub />
@@ -30,12 +52,12 @@ export default function Header({ home }: Props) {
           <Link href={'https://www.linkedin.com/in/mauriciolovera001/'}>
             <FaLinkedin />
           </Link>
-        </div>
-        <div className={styles.links}>
+        </motion.div>
+        <motion.div className={styles.links} variants={lineAnimation}>
           <ActiveLink text="Projects" url="projects" ammount="4" />
           <ActiveLink text="About" url="about" />
           <ActiveLink text="Contact" url="contact" />
-        </div>
+        </motion.div>
       </motion.nav>
     </header>
   )

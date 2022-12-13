@@ -21,16 +21,7 @@ const letterAnimation = {
     },
   },
 }
-const underlineAnimation = {
-  initial: { y: 400 },
-  animate: {
-    y: 0,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1,
-    },
-  },
-}
+
 const lineAnimation = {
   initial: { y: 650 },
   animate: {
