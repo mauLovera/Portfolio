@@ -25,7 +25,7 @@ export default function Header({ home }: Props) {
       transition: {
         ease: [0.6, 0.01, -0.05, 0.95],
         duration: 1.5,
-        delay: home ? 3 : 0,
+        delay: home ? 1.5 : 0,
       },
     },
   }

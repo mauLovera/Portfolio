@@ -63,6 +63,9 @@
       }
 
       display: flex;
+      span {
+        cursor: pointer;
+      }
 
       .navigation {
         position: fixed;
