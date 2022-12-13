@@ -4,16 +4,13 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import ActiveLink from '@/components/common/ActiveLink/ActiveLink'
 
 //* === Styles & Utils === *//
-import { delay, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { useState } from 'react'
 import styles from './Header.module.scss'
 
 //* === Variants * === //
 const timeline = {
-  animate: {
-    transition: {
-      // staggerChildren: 0.1,
-    },
-  },
+  animate: {},
 }
 
 interface Props {
@@ -28,9 +25,15 @@ export default function Header({ home }: Props) {
       transition: {
         ease: [0.6, 0.01, -0.05, 0.95],
         duration: 1.5,
-        delay: home ? 3 : 0
+        delay: home ? 3 : 0,
       },
     },
+  }
+
+  const [active, setActive] = useState<boolean>(false)
+
+  function handleClick() {
+    setActive(!active)
   }
 
   return (
@@ -57,6 +60,33 @@ export default function Header({ home }: Props) {
           <ActiveLink text="Projects" url="projects" ammount="4" />
           <ActiveLink text="About" url="about" />
           <ActiveLink text="Contact" url="contact" />
+        </motion.div>
+        <motion.div className={styles.menu} variants={lineAnimation}>
+          <span onClick={() => handleClick()}>Menu</span>
+          <div
+            className={styles.navigation}
+            style={
+              active
+                ? { display: 'flex' }
+                : { display: 'none', background: 'transparent' }
+            }
+          >
+            <ActiveLink text="Home" url="" />
+            <ActiveLink text="Projects" url="projects" ammount="4" />
+            <ActiveLink text="About" url="about" />
+            <ActiveLink text="Contact" url="contact" />
+            <div className={styles.icons}>
+              <Link href={'https://github.com/mauLovera'}>
+                <FaGithub />
+              </Link>
+              <Link href={'https://www.linkedin.com/in/mauriciolovera001/'}>
+                <FaLinkedin />
+              </Link>
+            </div>
+            <div className={styles.exit} onClick={() => handleClick()}>
+              X
+            </div>
+          </div>
         </motion.div>
       </motion.nav>
     </header>

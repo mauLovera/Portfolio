@@ -1,12 +1,16 @@
 @import '~styles/utilities/palette.scss';
 
 @mixin textScale {
+  @media (max-width: 1920px) {
+    font-size: $size_128px;
+  }
+
   @media (max-width: 1650px) {
-    font-size: 11vw;
+    font-size: 10vw;
   }
 
   @media (max-width: 1300px) {
-    font-size: 10.5vw;
+    font-size: 9.75vw;
   }
 
   @media (max-width: 1000px) {
