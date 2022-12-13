@@ -55,6 +55,13 @@
       justify-content: flex-end;
       gap: $size_32px;
       flex: 1;
+
+      a {
+        transition: color $transition-speed;
+        &:hover {
+          color: $accent-clr;
+        }
+      }
     }
 
     .menu {
