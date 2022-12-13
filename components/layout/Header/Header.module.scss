@@ -31,6 +31,13 @@
       display: flex;
       align-items: center;
       gap: $size_8px;
+
+      svg {
+        transition: color $transition-speed;
+        &:hover {
+          color: $accent-clr;
+        }
+      }
       @media (max-width: 940px) {
         flex: 1;
       }
@@ -53,7 +60,7 @@
       }
 
       justify-content: flex-end;
-      gap: $size_32px;
+      gap: $size_16px;
       flex: 1;
 
       a {
@@ -98,6 +105,7 @@
         }
 
         .exit {
+          cursor: pointer;
           display: flex;
 
           position: fixed;
