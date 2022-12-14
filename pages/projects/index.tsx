@@ -35,7 +35,7 @@ export default function ProjectsPage() {
         <Project
           title="Tic-Tac-Toe"
           description="A rendition of the classic Tic-Tac-Toe game."
-          tech="Next.js / TypeScript / Sass / Vercel"
+          tech="HTML 5 / CSS 3 / JavaScript / Netlify"
         />
       </div>
     </Layout>
