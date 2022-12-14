@@ -5,7 +5,7 @@ https://next-portfolio-ts.vercel.app/
 
 ## **Description** 📃
 
-Grimoire is a **DnD 5th Edition** front-end application that allows users to search and view results within the DnD 5e API.
+Portfolio website built within Next.js utilizing Typescript, Sass and Framer Motion.
 
 ## **Icebox** 🧊
 - [] Contact Form
