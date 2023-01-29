@@ -18,6 +18,11 @@ export default function ProjectsPage() {
       />
       <div className={styles.list}>
         <Project
+          title="Reactdoor"
+          description="A work experience cataloging application."
+          tech="Next.js / Sass / TypeScript / Vercel"
+        />
+        <Project
           title="Grimoire"
           description="A DnD 5th edition application used for searching through classes, monsters, and spells."
           tech="Next.js / Sass / JavaScript / Vercel"
@@ -31,11 +36,6 @@ export default function ProjectsPage() {
           title="Orbit"
           description="A video game social media platform utilizing the RAWG.io API, to seach, collect, and display collections of video games."
           tech="Node.js / MongoDB / Express / Heroku"
-        />
-        <Project
-          title="Tic-Tac-Toe"
-          description="A rendition of the classic Tic-Tac-Toe game."
-          tech="HTML 5 / CSS 3 / JavaScript / Netlify"
         />
       </div>
     </Layout>

@@ -58,7 +58,7 @@ export default function Header({ home }: Props) {
         </motion.div>
         <motion.div className={styles.links} variants={lineAnimation}>
           <ActiveLink text="Home" url="" />
-          <ActiveLink text="Projects" url="projects" ammount="4" />
+          <ActiveLink text="Projects" url="projects" ammount="5" />
           <ActiveLink text="About" url="about" />
           <ActiveLink text="Contact" url="contact" />
         </motion.div>

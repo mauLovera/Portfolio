@@ -24,6 +24,15 @@ export default function List({
   return (
     <div className={styles.container}>
       <Row
+        title="Reactdoor"
+        animation={animation}
+        path="/projects/reactdoor"
+        timeline={timeline}
+        tech={['Next.js / Sass / TypeScript / Vercel']}
+        mouseEnter={handleMouseEnter}
+        mouseExit={handleMouseExit}
+      />
+      <Row
         title="Grimoire"
         animation={animation}
         path="/projects/grimoire"
@@ -47,15 +56,6 @@ export default function List({
         path="/projects/orbit"
         timeline={timeline}
         tech={['Node.js / MongoDB / Express / Heroku']}
-        mouseEnter={handleMouseEnter}
-        mouseExit={handleMouseExit}
-      />
-      <Row
-        title="Tic-Tac-Toe"
-        animation={animation}
-        path="/projects/tic-tac-toe"
-        timeline={timeline}
-        tech={['HTML 5 / CSS 3 / JavaScript / Netlify']}
         mouseEnter={handleMouseEnter}
         mouseExit={handleMouseExit}
       />

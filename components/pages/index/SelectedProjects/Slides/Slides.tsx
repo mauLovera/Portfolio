@@ -15,6 +15,14 @@ export default function Slides({ focus }: Props) {
       <Image
         fill
         alt={focus}
+        src={`/images/project-images/reactdoor.png`}
+        className={`${styles.image} ${
+          focus === 'reactdoor' ? styles.active : ''
+        }`}
+      />
+      <Image
+        fill
+        alt={focus}
         src={`/images/project-images/grimoire.png`}
         className={`${styles.image} ${
           focus === 'grimoire' ? styles.active : ''
@@ -31,14 +39,6 @@ export default function Slides({ focus }: Props) {
         alt={focus}
         src={`/images/project-images/orbit.png`}
         className={`${styles.image} ${focus === 'orbit' ? styles.active : ''}`}
-      />
-      <Image
-        fill
-        alt={focus}
-        src={`/images/project-images/tic-tac-toe.png`}
-        className={`${styles.image} ${
-          focus === 'tic-tac-toe' ? styles.active : ''
-        }`}
       />
     </motion.div>
   )
