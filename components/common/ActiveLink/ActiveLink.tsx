@@ -8,10 +8,10 @@ import { NextRouter, useRouter } from 'next/router'
 interface Props {
   text: string
   url: string
-  ammount?: string
+  amount?: number
 }
 
-export default function ActiveLink({ text, url, ammount }: Props) {
+export default function ActiveLink({ text, url, amount }: Props) {
   const router: NextRouter = useRouter()
   return (
     <Link
@@ -19,7 +19,7 @@ export default function ActiveLink({ text, url, ammount }: Props) {
       className={router.pathname === `/${url}` ? styles.active : ''}
     >
       {text}
-      {ammount ? <small className={styles.ammount}>{ammount}</small> : ''}
+      {amount ? <small className={styles.amount}>{amount}</small> : ''}
     </Link>
   )
 }

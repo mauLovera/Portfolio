@@ -6,7 +6,9 @@ import Footer from '@/components/layout/Footer/Footer'
 //* === Styles & Utils === *//
 import styles from './Layout.module.scss'
 
-import { ReactNode } from 'react'
+import { projects } from '@/lib/projects'
+
+import { ReactNode, useState } from 'react'
 interface Props {
   title: string
   description: string
@@ -22,6 +24,7 @@ export default function Layout({
   children,
   home,
 }: Props) {
+  const [numberOfProjects, setNumberOfProjects] = useState(projects.length)
   return (
     <>
       <Head>
@@ -30,9 +33,9 @@ export default function Layout({
         <meta name="keywords" content={keywords} />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
-      <Header home={home} />
+      <Header home={home} numberOfProjects={numberOfProjects} />
       <main className={styles.container}>{children}</main>
-      <Footer />
+      <Footer numberOfProjects={numberOfProjects} />
     </>
   )
 }

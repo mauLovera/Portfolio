@@ -15,9 +15,10 @@ const timeline = {
 
 interface Props {
   home: boolean
+  numberOfProjects: number
 }
 
-export default function Header({ home }: Props) {
+export default function Header({ home, numberOfProjects }: Props) {
   const lineAnimation = {
     initial: { y: 200 },
     animate: {
@@ -58,7 +59,7 @@ export default function Header({ home }: Props) {
         </motion.div>
         <motion.div className={styles.links} variants={lineAnimation}>
           <ActiveLink text="Home" url="" />
-          <ActiveLink text="Projects" url="projects" ammount="5" />
+          <ActiveLink text="Projects" url="projects" amount={numberOfProjects} />
           <ActiveLink text="About" url="about" />
           <ActiveLink text="Contact" url="contact" />
         </motion.div>
@@ -73,7 +74,7 @@ export default function Header({ home }: Props) {
             }
           >
             <ActiveLink text="Home" url="" />
-            <ActiveLink text="Projects" url="projects" ammount="4" />
+            <ActiveLink text="Projects" url="projects" amount={numberOfProjects} />
             <ActiveLink text="About" url="about" />
             <ActiveLink text="Contact" url="contact" />
             <div className={styles.icons}>
