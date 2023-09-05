@@ -39,6 +39,8 @@
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
   max-width: $max-width;
   padding-bottom: $size_128px;
   @include paddingScale;

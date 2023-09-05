@@ -18,8 +18,9 @@ export default function ActiveLink({ text, url, amount }: Props) {
       href={`/${url}`}
       className={router.pathname === `/${url}` ? styles.active : ''}
     >
-      {text}
-      {amount ? <small className={styles.amount}>{amount}</small> : ''}
+      <span>
+        {text}
+      </span>
     </Link>
   )
 }

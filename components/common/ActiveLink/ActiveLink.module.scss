@@ -1,12 +1,13 @@
 @import '~styles/utilities/palette.scss';
 
-.active {
-  color: $accent-clr;
+.active { 
+	position: relative;
+  // border: 1px solid red;
 }
 
 .amount {
-  position: relative;
-  opacity: .5;
-  left: $size_4px;
-  bottom: $size_4px;
+	position: relative;
+	opacity: 0.5;
+	margin-left: $size_4px;
+	bottom: $size_4px;
 }

@@ -49,7 +49,7 @@ export default function Header({ home, numberOfProjects }: Props) {
           <Link href={'/'}>Mauricio Lovera</Link>
         </motion.div>
         <motion.div className={styles.title} variants={lineAnimation}>
-          <span>Full Stack Web Developer</span>
+          <span>Full-Stack Software Engineer</span>
           <Link href={'https://github.com/mauLovera'}>
             <FaGithub />
           </Link>
