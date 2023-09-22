@@ -5,11 +5,11 @@ import { RiArrowRightCircleFill } from 'react-icons/ri'
 //* === Styles & Utils === *//
 import styles from './Description.module.scss'
 import { motion } from 'framer-motion'
+import { projects } from '@/lib/projects'
 
 const timeline = {
   animate: {
     transition: {
-      // delayChildren: 0.4,
       staggerChildren: 0.05,
     },
   },
@@ -49,7 +49,7 @@ export default function Description({ title, description, tech }: Props) {
       <div className={styles.top}>
         <div className={styles.projectNumber}>
           <span className={styles.ascendingNumber}></span>
-          <span>/00-4</span>
+          <span>/00-{projects.length}</span>
         </div>
         <Link href={`/projects/${title.toLowerCase()}`}>
           <div className={styles.title} >
