@@ -15,17 +15,6 @@ const timeline = {
   },
 }
 
-const letterAnimation = {
-  initial: { y: 400 },
-  animate: {
-    y: 0,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: .8,
-    },
-  },
-}
-
 const lineAnimation = {
   initial: { y: 200 },
   animate: {
