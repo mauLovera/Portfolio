@@ -15,7 +15,7 @@ export default function Slides({ focus }: Props) {
       <Image
         fill
         alt={focus}
-        src={`/images/project-images/manto-angelico.png`}
+        src={`/images/project-images/manto angelico.png`}
         className={`${styles.image} ${
           focus === 'manto angelico' ? styles.active : ''
         }`}
