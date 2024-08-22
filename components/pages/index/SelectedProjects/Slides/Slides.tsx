@@ -15,6 +15,14 @@ export default function Slides({ focus }: Props) {
       <Image
         fill
         alt={focus}
+        src={`/images/project-images/manto-angelico.png`}
+        className={`${styles.image} ${
+          focus === 'manto angelico' ? styles.active : ''
+        }`}
+      />
+      <Image
+        fill
+        alt={focus}
         src={`/images/project-images/reactdoor.png`}
         className={`${styles.image} ${
           focus === 'reactdoor' ? styles.active : ''

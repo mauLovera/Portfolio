@@ -18,6 +18,11 @@ export default function ProjectsPage() {
       />
       <div className={styles.list}>
         <Project
+          title="Manto Angelico"
+          description="A spiritual consulting site."
+          tech="Next.js / Tailwind / TypeScript / Netlify"
+        />
+        <Project
           title="Reactdoor"
           description="A work experience cataloging application."
           tech="Next.js / Sass / TypeScript / Netlify"

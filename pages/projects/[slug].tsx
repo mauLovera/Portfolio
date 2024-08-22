@@ -34,7 +34,7 @@ export default function ProjectPage({ project }: Project) {
   return (
     <Layout home={false}>
       <PageBanner
-        title={project[0].title}
+        title={project[0]?.title}
         description={project[0].briefDescription}
         deployment={project[0].deployment}
         github={project[0].github}
