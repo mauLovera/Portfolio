@@ -1,4 +1,7 @@
-export const timeline = {
+// TODO: Consolidate all these duplicate animations
+import { Variants } from 'framer-motion'
+
+export const timeline: Variants = {
   animate: {
     transition: {
       delayChildren: 1,
@@ -7,7 +10,7 @@ export const timeline = {
   },
 }
 
-export const letterTimeline = {
+export const letterTimeline: Variants = {
   animate: {
     transition: {
       delayChildren: 0,
@@ -16,7 +19,7 @@ export const letterTimeline = {
   },
 }
 
-export const lineAnimation = {
+export const lineAnimation: Variants = {
   initial: { y: 200 },
   animate: {
     y: 0,
@@ -27,7 +30,7 @@ export const lineAnimation = {
   },
 }
 
-export const letterAnimation = {
+export const letterAnimation: Variants = {
   initial: { y: 400 },
   animate: {
     y: 0,
@@ -38,7 +41,7 @@ export const letterAnimation = {
   },
 }
 
-export const buttonAnimation = {
+export const buttonAnimation: Variants = {
   initial: { scale: 0 },
   animate: {
     scale: 1,

@@ -1,9 +1,9 @@
 //* === Styles & Utils === *//
 import styles from './LandingBanner.module.scss'
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 
 //* === Variants === //
-const banner = {
+const banner: Variants  = {
   animate: {
     transition: {
       delayChildren: 0.4,
@@ -11,7 +11,7 @@ const banner = {
     },
   },
 }
-const letterAnimation = {
+const letterAnimation: Variants  = {
   initial: { y: 400 },
   animate: {
     y: 0,
@@ -22,7 +22,7 @@ const letterAnimation = {
   },
 }
 
-const lineAnimation = {
+const lineAnimation: Variants  = {
   initial: { y: 650 },
   animate: {
     y: 0,

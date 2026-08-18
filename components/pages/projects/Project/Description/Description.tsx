@@ -4,7 +4,8 @@ import { RiArrowRightCircleFill } from 'react-icons/ri'
 
 //* === Styles & Utils === *//
 import styles from './Description.module.scss'
-import { motion } from 'framer-motion'
+// TODO: Do i still need to add type prefix for bundle optimizations?
+import { motion, type Variants } from 'framer-motion'
 import { projects } from '@/lib/projects'
 
 const timeline = {
@@ -15,7 +16,7 @@ const timeline = {
   },
 }
 
-const lineAnimation = {
+const lineAnimation: Variants  = {
   initial: { y: 200 },
   animate: {
     y: 0,
