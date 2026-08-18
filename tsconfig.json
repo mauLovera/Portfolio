@@ -19,12 +19,12 @@
     "jsx": "react-jsx",
     "incremental": true,
     // TODO: baseURl is deprecated
-    "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/styles/*": ["styles/*"],
-      "@/lib/*": ["lib/*"],
-      "@/public/*": ["public/*"]
+      "*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/public/*": ["./public/*"]
     }
   },
   "include": [

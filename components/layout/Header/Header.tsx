@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import ActiveLink from '@/components/common/ActiveLink/ActiveLink'
 
 //* === Styles & Utils === *//
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { useState } from 'react'
 import styles from './Header.module.scss'
 
@@ -19,7 +19,7 @@ interface Props {
 }
 
 export default function Header({ home, numberOfProjects }: Props) {
-  const lineAnimation = {
+  const lineAnimation: Variants = {
     initial: { y: 200 },
     animate: {
       y: 0,
